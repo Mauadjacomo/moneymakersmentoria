@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Money Makers I.A — Mentoria Exclusiva</title>
+
+  <!-- ESTILO -->
+  <style>
+    :root{
+      --neon:#00ffe7;
+      --blue:#0057ff;
+      --bg:#04050a;
+      --card:#0b0f17;
+      --muted:#9aa3ad;
+      --danger:#ff3b3b;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;font-family:Segoe UI, Arial, sans-serif}
+    body{background:var(--bg);color:#fff;line-height:1.55}
+
+    /* HERO */
+    .hero{
+      min-height:100vh;
+      display:grid;
+      place-items:center;
+      padding:60px 20px;
+      background:
+        radial-gradient(1200px 600px at 10% 10%, rgba(0,255,231,.08), transparent 40%),
+        radial-gradient(800px 400px at 90% 10%, rgba(0,87,255,.12), transparent 40%),
+        linear-gradient(115deg, rgba(0,0,0,.7), rgba(0,0,0,.95)),
+        url('https://images.unsplash.com/photo-1591696205602-2f950c417cb9?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      text-align:center;
+    }
+    .badge{display:inline-block;padding:8px 16px;border-radius:999px;background:rgba(0,255,231,.15);border:1px solid rgba(0,255,231,.35);margin-bottom:16px}
+    .h1{font-size:clamp(2.1rem,4.5vw,3.5rem);font-weight:900;letter-spacing:.2px}
+    .sub{max-width:860px;margin:14px auto 22px;font-size:1.05rem;color:#dbe3ea}
+    .cta{background:var(--neon);color:#000;border:none;border-radius:16px;padding:18px 28px;font-weight:900;font-size:1.1rem;cursor:pointer;transition:.2s}
+    .cta:hover{transform:translateY(-2px);box-shadow:0 15px 35px rgba(0,255,231,.25)}
+    .countdown{display:flex;gap:12px;justify-content:center;margin-top:16px;font-weight:800}
+    .cd{background:#0c1220;border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:12px 16px;min-width:72px}
+
+    /* NAV */
+    .nav{position:sticky;top:0;z-index:9;background:#060912;border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav-in{max-width:1100px;margin:0 auto;display:flex;gap:18px;justify-content:center;padding:12px 10px}
+    .nav a{color:#cfd7df;text-decoration:none;font-weight:700}
+    .nav a:hover{color:var(--neon)}
+
+    /* SECTIONS */
+    .sec{max-width:1100px;margin:0 auto;padding:60px 18px}
+    .grid{display:grid;gap:18px}
+    .g2{grid-template-columns:repeat(2,1fr)}
+    .g3{grid-template-columns:repeat(3,1fr)}
+    @media(max-width:900px){.g2,.g3{grid-template-columns:1fr}}
+
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:22px;padding:26px}
+    .title{font-size:2rem;margin-bottom:12px}
+    .muted{color:var(--muted)}
+
+    /* TECH STRIP */
+    .tech{
+      height:120px;border-radius:18px;
+      background:
+        linear-gradient(135deg, rgba(0,255,231,.15), rgba(0,87,255,.25)),
+        url('https://images.unsplash.com/photo-1557438159-51eec7a6c9e8?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover;background-position:center;
+      border:1px solid rgba(255,255,255,.06);
+    }
+
+    /* PRICING */
+    .price-old{color:#9aa3ad;text-decoration:line-through;font-size:1.1rem}
+    .price-new{font-size:3rem;color:var(--danger);font-weight:900}
+    .scarcity{color:#ffc9c9;font-weight:800;margin-top:10px}
+
+    /* MODULES TABLE */
+    table{width:100%;border-collapse:collapse;border-radius:16px;overflow:hidden}
+    th,td{border:1px solid rgba(255,255,255,.06);padding:14px}
+    th{background:#0b1224}
+    tr:nth-child(even){background:#0a1020}
+
+    /* FIXED CTA */
+    .fixed{
+      position:fixed;bottom:18px;right:18px;z-index:10
+    }
+    .fixed .cta{border-radius:999px}
+
+    /* FOOTER */
+    footer{background:#060912;border-top:1px solid rgba(255,255,255,.06);text-align:center;padding:30px 18px;color:#8f98a3}
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero" id="topo">
+  <div>
+    <div class="badge">Money Makers I.A — Mentoria Exclusiva</div>
+    <h1 class="h1">Se você ainda gasta horas trabalhando, você está deixando dinheiro na mesa.</h1>
+    <p class="sub">
+      Método prático de automação com IA para transformar processos manuais em sistemas mais eficientes e escaláveis.
+    </p>
+
+    <button class="cta" onclick="scrollToId('comprar')">
+      QUERO DESBLOQUEAR A MÁQUINA DE PRODUTIVIDADE COM IA
+    </button>
+
+    <div class="countdown" id="countdown">
+      <div class="cd"><span id="d">00</span>d</div>
+      <div class="cd"><span id="h">00</span>h</div>
+      <div class="cd"><span id="m">00</span>m</div>
+      <div class="cd"><span id="s">00</span>s</div>
+    </div>
+  </div>
+</section>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-in">
+    <a href="#paraquem">Para quem</a>
+    <a href="#prova">Prova</a>
+    <a href="#segredo">O método</a>
+    <a href="#bonus">Bônus</a>
+    <a href="#comprar">Comprar</a>
+    <a href="#live">Live</a>
+  </div>
+</nav>
+
+<!-- PARA QUEM -->
+<section class="sec" id="paraquem">
+  <div class="grid g2">
+    <div class="card">
+      <h2 class="title">ALERTA: Pare tudo se você…</h2>
+      <ul class="muted">
+        <li>Quer estruturar ativos digitais e automações com IA.</li>
+        <li>Quer reduzir trabalho manual e aumentar eficiência.</li>
+        <li>Busca processos escaláveis para serviços digitais.</li>
+        <li>Quer liderar o uso de ferramentas inteligentes no seu mercado.</li>
+      </ul>
+      <p style="margin-top:10px;font-weight:800">Se você se identificou, este método é para você.</p>
+    </div>
+    <div class="tech"></div>
+  </div>
+</section>
+
+<!-- PROVA -->
+<section class="sec" id="prova">
+  <div class="grid g2">
+    <div class="tech"></div>
+    <div class="card">
+      <h2 class="title">Resultados típicos de automação</h2>
+      <p class="muted">
+        Exemplos educacionais de ganhos de eficiência: mais velocidade de produção, menos tarefas repetitivas e melhor previsibilidade operacional.
+        (Demonstrações simuladas para fins educacionais.)
+      </p>
+      <ul class="muted" style="margin-top:10px">
+        <li>Fluxos automatizados reduzem retrabalho.</li>
+        <li>Conteúdo gerado com apoio de IA.</li>
+        <li>Sistemas que funcionam 24/7.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SEGREDO / CONTEÚDO -->
+<section class="sec" id="segredo">
+  <div class="card">
+    <h2 class="title">Os 4 Pilares da Automação (Conteúdo)</h2>
+    <div class="tech" style="margin-bottom:16px"></div>
+    <table>
+      <thead>
+        <tr>
+          <th>Módulo</th>
+          <th>Nome</th>
+          <th>O que você constrói</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Módulo 1</td>
+          <td>Mentalidade de Sistemas com IA</td>
+          <td>Uso prático de assistentes como “copiloto” de tarefas.</td>
+        </tr>
+        <tr>
+          <td>Módulo 2</td>
+          <td>Engenharia de Prompts Profissionais</td>
+          <td>Comandos estruturados para criação eficiente de ativos.</td>
+        </tr>
+        <tr>
+          <td>Módulo 3</td>
+          <td>Blueprint de Automação</td>
+          <td>Fluxos que conectam IA, páginas e entregas digitais.</td>
+        </tr>
+        <tr>
+          <td>Módulo 4</td>
+          <td>Tráfego Assistido por IA</td>
+          <td>Otimização de campanhas com apoio de dados.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- BONUS -->
+<section class="sec" id="bonus">
+  <div class="grid g3">
+    <div class="card">
+      <h3>Bônus 1</h3>
+      <p class="muted">Cofre de prompts profissionais (biblioteca prática).</p>
+    </div>
+    <div class="card">
+      <h3>Bônus 2</h3>
+      <p class="muted">Aula especial sobre criação de serviços com IA.</p>
+    </div>
+    <div class="card">
+      <h3>Bônus 3</h3>
+      <p class="muted">Grupo exclusivo de alunos.</p>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:18px">
+    <h3>Garantia</h3>
+    <p class="muted">
+      Garantia de 7 dias conforme o Código de Defesa do Consumidor. Solicitação pela mesma forma de pagamento.
+    </p>
+  </div>
+</section>
+
+<!-- PREÇO / COMPRA -->
+<section class="sec" id="comprar">
+  <div class="grid g2">
+    <div class="card">
+      <h2 class="title">Preço especial de lançamento</h2>
+      <p class="price-old">De R$ 677,89</p>
+      <p class="price-new">R$ 139,89</p>
+      <p class="scarcity">Oferta por tempo limitado.</p>
+      <button class="cta" onclick="comprar()">FALAR NO WHATSAPP</button>
+    </div>
+    <div class="tech"></div>
+  </div>
+</section>
+
+<!-- LIVE -->
+<section class="sec" id="live">
+  <div class="card">
+    <h2 class="title">Aulas ao vivo</h2>
+    <p class="muted">Clique para abrir no Google Meet.</p>
+    <button class="cta" onclick="abrirLive()">ENTRAR NA LIVE</button>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Money Makers I.A — Mentoria Exclusiva</p>
+</footer>
+
+<!-- FIXED CTA -->
+<div class="fixed">
+  <button class="cta" onclick="scrollToId('comprar')">Quero entrar</button>
+</div>
+
+<!-- JS -->
+<script>
+  function comprar(){
+    window.open("https://wa.me/5511989353418","_blank");
+  }
+  function abrirLive(){
+    window.open("https://meet.google.com/","_blank");
+  }
+  function scrollToId(id){
+    document.getElementById(id).scrollIntoView({behavior:'smooth'});
+  }
+
+  // CONTAGEM REGRESSIVA (72h)
+  const end = new Date(Date.now() + 72*60*60*1000);
+  const ids = {d:'d', h:'h', m:'m', s:'s'};
+  setInterval(()=>{
+    const t = end - new Date();
+    if(t<=0) return;
+    const d = Math.floor(t/86400000);
+    const h = Math.floor((t%86400000)/3600000);
+    const m = Math.floor((t%3600000)/60000);
+    const s = Math.floor((t%60000)/1000);
+    document.getElementById(ids.d).textContent = String(d).padStart(2,'0');
+    document.getElementById(ids.h).textContent = String(h).padStart(2,'0');
+    document.getElementById(ids.m).textContent = String(m).padStart(2,'0');
+    document.getElementById(ids.s).textContent = String(s).padStart(2,'0');
+  },1000);
+</script>
+</body>
+</html>
