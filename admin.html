@@ -1,142 +1,103 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang='pt-BR'>
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset='UTF-8' />
+<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 <title>Admin Leads — Money Makers I.A</title>
-<meta name="robots" content="noindex,nofollow" />
+<meta name='robots' content='noindex,nofollow' />
 <style>
-:root{--neon:#00ffe7;--blue:#0057ff;--bg:#04050a;--card:#0b0f17;--muted:#9aa3ad;--danger:#ff3b3b}
-*{box-sizing:border-box;margin:0;padding:0;font-family:Segoe UI,Arial,sans-serif}
-body{background:var(--bg);color:#fff;min-height:100vh}
-.wrap{max-width:1080px;margin:0 auto;padding:32px 18px 60px}
-.top{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:18px}
-h1{font-size:1.6rem;font-weight:900}
+:root{--neon:#00ffe7;--bg:#04050a;--card:#0b0f17;--line:rgba(255,255,255,.08);--muted:#9aa3ad;--danger:#ff3b3b}
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',Arial,sans-serif}
+body{background:radial-gradient(800px 400px at 20% 0%,rgba(0,255,231,.07),transparent),radial-gradient(700px 380px at 90% 10%,rgba(0,87,255,.14),transparent),var(--bg);color:#fff;min-height:100vh}
+.wrap{max-width:1080px;margin:0 auto;padding:32px 20px 60px}
+.top{display:flex;gap:14px;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;margin-bottom:18px}
+h1{font-size:clamp(1.4rem,3vw,1.8rem);font-weight:900;line-height:1.15}
 h1 span{color:var(--neon)}
-.card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:22px}
-.badge{display:inline-block;padding:6px 12px;border-radius:999px;background:rgba(0,255,231,.12);border:1px solid rgba(0,255,231,.3);font-size:.8rem;font-weight:800}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
+.badge{display:inline-block;padding:6px 13px;border-radius:999px;background:rgba(0,255,231,.12);border:1px solid rgba(0,255,231,.32);font-size:.78rem;font-weight:800;letter-spacing:.4px}
 .row{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
-input[type=text],input[type=password],input[type=search]{padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:#080d18;color:#fff;font-size:.95rem;min-width:240px;flex:1}
-button{background:var(--neon);color:#000;border:none;border-radius:12px;padding:12px 18px;font-weight:900;cursor:pointer}
+input[type=text],input[type=password],input[type=search]{padding:13px 15px;border-radius:12px;border:1px solid rgba(255,255,255,.13);background:#080d18;color:#fff;font-size:.95rem;min-width:220px;flex:1}
+input:focus{outline:2px solid var(--neon);border-color:var(--neon)}
+button{background:var(--neon);color:#000;border:none;border-radius:12px;padding:13px 18px;font-weight:900;cursor:pointer;transition:.15s}
+button:hover{filter:brightness(1.05)}
 button:disabled{opacity:.6;cursor:wait}
 button.ghost{background:transparent;color:var(--neon);border:1px solid var(--neon)}
 .muted{color:var(--muted);font-size:.9rem}
-.table-wrap{overflow:auto;margin-top:12px;border-radius:12px;border:1px solid rgba(255,255,255,.07)}
-table{width:100%;border-collapse:collapse;min-width:720px}
-th,td{padding:12px 14px;text-align:left;border-bottom:1px solid rgba(255,255,255,.06);font-size:.9rem}
-th{background:#0b1224;color:#dbe3ea;position:sticky;top:0}
+.actions{display:flex;gap:10px;flex-wrap:wrap}
+.table-wrap{overflow:auto;margin-top:12px;border-radius:12px;border:1px solid var(--line);max-height:62vh}
+table{width:100%;border-collapse:collapse;min-width:720px;background:#0a0f1c}
+th,td{padding:13px 15px;text-align:left;border-bottom:1px solid rgba(255,255,255,.06);font-size:.9rem}
+th{background:#0b1224;color:#dbe3ea;position:sticky;top:0;z-index:1}
 tr:hover td{background:#0d1528}
-.state{padding:26px;text-align:center;color:var(--muted)}
-.error{background:rgba(255,59,59,.1);border:1px solid rgba(255,59,59,.4);color:#ffc9c9;padding:12px;border-radius:12px;margin-top:12px;display:none}
+.state{padding:28px;text-align:center;color:var(--muted)}
+.error{background:rgba(255,59,59,.1);border:1px solid rgba(255,59,59,.4);color:#ffc9c9;padding:13px;border-radius:12px;margin-top:12px;display:none}
 .count{font-weight:900;color:var(--neon)}
 a{color:var(--neon)}
-.login{max-width:420px;margin:12vh auto}
+.login{max-width:430px;margin:10vh auto}
 .login h1{margin-bottom:8px}
+.login .card{padding:28px}
+@media(max-width:640px){.wrap{padding:22px 14px 48px}.top{align-items:stretch;flex-direction:column}.actions button{flex:1}}
 </style>
 </head>
 <body>
-<div class="wrap">
-<div id="loginBox" class="card login">
-<h1>Admin <span>Leads</span></h1>
-<p class="muted">Área interna. Digite a senha de acesso para visualizar os leads capturados.</p>
-<div class="row"><input id="pass" type="password" placeholder="Senha de acesso" autocomplete="current-password" /></div>
-<div class="row"><button id="enterBtn" style="width:100%">ENTRAR</button></div>
-<p class="muted">A senha padrão inicial é <b>moneymakers2025</b> — troque no código do admin.html após publicar. O acesso fica salvo só nesta sessão do navegador.</p>
-<p class="muted" style="margin-top:8px"><a href="index.html">← Voltar para a landing</a></p>
-<div class="error" id="loginErr"></div>
+<div class='wrap'>
+<div id='loginBox' class='login'><div class='card'>
+<span class='badge'>MONEY MAKERS I.A • ADMIN</span>
+<h1 style='margin-top:10px'>Admin <span>Leads</span></h1>
+<p class='muted'>Área interna. Digite a senha de acesso para visualizar os leads capturados.</p>
+<div class='row'><input id='pass' type='password' placeholder='Senha de acesso' autocomplete='current-password' /></div>
+<div class='row'><button id='enterBtn' style='width:100%'>ENTRAR</button></div>
+<p class='muted'>A senha padrão inicial é <b>moneymakers2025</b> — troque a constante ADMIN_PASS no código após publicar.</p>
+<p class='muted' style='margin-top:8px'><a href='index.html'>← Voltar para a landing</a></p>
+<div class='error' id='loginErr'></div>
+</div></div>
+<div id='panel' hidden>
+<div class='top'>
+<div><span class='badge'>MONEY MAKERS I.A • PAINEL</span><h1 style='margin-top:8px'>Leads capturados <span id='total' class='count'>—</span></h1><p class='muted'>Tabela <b>mentorship_leads</b> • ordenado por <b>created_at desc</b></p></div>
+<div class='actions'><button class='ghost' id='logoutBtn'>Sair</button><button id='refreshBtn'>Atualizar</button><button class='ghost' id='csvBtn'>Exportar CSV</button></div>
 </div>
-<div id="panel" hidden>
-<div class="top">
-<div><span class="badge">MONEY MAKERS I.A • PAINEL</span><h1 style="margin-top:8px">Leads capturados <span id="total" class="count">—</span></h1><p class="muted">Tabela <b>mentorship_leads</b> • ordenado por <b>created_at desc</b></p></div>
-<div class="row" style="margin:0"><button class="ghost" id="logoutBtn">Sair</button><button id="refreshBtn">Atualizar</button><button class="ghost" id="csvBtn">Exportar CSV</button></div>
-</div>
-<div class="card">
-<div class="row"><input id="search" type="search" placeholder="Buscar por nome ou e-mail…" aria-label="Buscar por nome ou e-mail" /><button class="ghost" id="clearBtn">Limpar</button></div>
-<div class="error" id="loadErr"></div>
-<div class="table-wrap"><table>
+<div class='card'>
+<div class='row'><input id='search' type='search' placeholder='Buscar por nome ou e-mail…' aria-label='Buscar por nome ou e-mail' /><button class='ghost' id='clearBtn'>Limpar</button></div>
+<div class='error' id='loadErr'></div>
+<div class='table-wrap'><table>
 <thead><tr><th>Data</th><th>Nome</th><th>E-mail</th><th>Telefone / WhatsApp</th><th>Origem</th></tr></thead>
-<tbody id="tbody"><tr><td colspan="5"><div class="state">Carregando…</div></td></tr></tbody>
+<tbody id='tbody'><tr><td colspan='5'><div class='state'>Carregando…</div></td></tr></tbody>
 </table></div>
-<p class="muted" id="hint" style="margin-top:10px"></p>
+<p class='muted' id='hint' style='margin-top:10px'></p>
 </div>
 </div>
 </div>
-<script type="module">
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
-const SUPABASE_URL = "https://behxrckorrgbxmhjvxtb.supabase.co";
-const SUPABASE_KEY = "sb_publishable_85rBSrDBLsx0KmXEvOBWIw_uACQ-8ly";
-const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
-const ADMIN_PASS = "moneymakers2025";
-const loginBox = document.getElementById('loginBox');
-const panel = document.getElementById('panel');
-const pass = document.getElementById('pass');
-const enterBtn = document.getElementById('enterBtn');
-const loginErr = document.getElementById('loginErr');
-const tbody = document.getElementById('tbody');
-const total = document.getElementById('total');
-const search = document.getElementById('search');
-const loadErr = document.getElementById('loadErr');
-const hint = document.getElementById('hint');
-let allLeads = [];
-function isAuthed(){ try{ return sessionStorage.getItem('mm_admin_auth')==='1'; }catch(e){ return false; } }
-function showPanel(){ loginBox.hidden = true; panel.hidden = false; loadLeads(); }
-function showLogin(){ loginBox.hidden = false; panel.hidden = true; }
-if(isAuthed()) showPanel();
-enterBtn.addEventListener('click', ()=>{
-  loginErr.style.display='none';
-  if(pass.value === ADMIN_PASS){ try{ sessionStorage.setItem('mm_admin_auth','1'); }catch(e){} showPanel(); }
-  else { loginErr.textContent = 'Senha incorreta.'; loginErr.style.display='block'; }
-});
-pass.addEventListener('keydown', (e)=>{ if(e.key==='Enter') enterBtn.click(); });
-document.getElementById('logoutBtn').addEventListener('click', ()=>{ try{ sessionStorage.removeItem('mm_admin_auth'); }catch(e){} showLogin(); });
-document.getElementById('refreshBtn').addEventListener('click', ()=> loadLeads());
-document.getElementById('clearBtn').addEventListener('click', ()=>{ search.value=''; render(); });
-search.addEventListener('input', ()=> render());
-document.getElementById('csvBtn').addEventListener('click', ()=>{
-  const rows = filtered();
-  if(!rows.length) return;
-  const head = ['created_at','name','email','phone','whatsapp','source'];
-  const esc = (v)=> '"'+String(v??'').replace(/"/g,'""')+'"';
-  const csv = [head.join(',')].concat(rows.map(r=> head.map(h=> esc(r[h])).join(','))).join('\n');
-  const blob = new Blob([csv], {type:'text/csv;charset=utf-8'});
-  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'leads-money-makers.csv'; a.click();
-});
-function filtered(){
-  const q = search.value.trim().toLowerCase();
-  if(!q) return allLeads;
-  return allLeads.filter(l=> (l.name||'').toLowerCase().includes(q) || (l.email||'').toLowerCase().includes(q));
-}
-function fmtDate(iso){ try{ return new Date(iso).toLocaleString('pt-BR'); }catch(e){ return iso||'—'; } }
-function render(){
-  const rows = filtered();
-  total.textContent = String(allLeads.length);
-  if(!rows.length){
-    tbody.innerHTML = '<tr><td colspan="5"><div class="state">'+(allLeads.length? 'Nenhum lead encontrado para esta busca.' : 'Nenhum lead ainda. Faça um teste no formulário da landing.')+'</div></td></tr>';
-    hint.textContent = allLeads.length ? rows.length+' resultado(s) para o filtro atual.' : '';
-    return;
-  }
-  tbody.innerHTML = rows.map(r=>{
-    const phone = r.phone || r.whatsapp || '—';
-    return '<tr><td>'+fmtDate(r.created_at)+'</td><td><b>'+escapeHtml(r.name||'—')+'</b></td><td>'+escapeHtml(r.email||'—')+'</td><td>'+escapeHtml(phone)+'</td><td>'+escapeHtml(r.source||'—')+'</td></tr>';
-  }).join('');
-  hint.textContent = 'Exibindo '+rows.length+' de '+allLeads.length+' lead(s).';
-}
-function escapeHtml(s){ return String(s).replace(/[&<>"']/g, (c)=> ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
-async function loadLeads(){
-  loadErr.style.display='none';
-  tbody.innerHTML = '<tr><td colspan="5"><div class="state">Carregando leads…</div></td></tr>';
-  try{
-    const { data, error } = await supabase.from('mentorship_leads').select('*').order('created_at', { ascending:false }).limit(500);
-    if(error) throw error;
-    allLeads = data || [];
-    render();
-  }catch(e){
-    console.warn(e);
-    tbody.innerHTML = '<tr><td colspan="5"><div class="state">Erro ao carregar. Verifique RLS/conexão e tente atualizar.</div></td></tr>';
-    loadErr.textContent = '⚠️ Falha ao listar leads: '+(e.message||e)+' — libere SELECT/INSERT anônimo na tabela mentorship_leads (ver README).';
-    loadErr.style.display='block';
-  }
-}
+<script type='module'>
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+const SUPABASE_URL='https://behxrckorrgbxmhjvxtb.supabase.co';
+const SUPABASE_KEY='sb_publishable_85rBSrDBLsx0KmXEvOBWIw_uACQ-8ly';
+const supabase=createClient(SUPABASE_URL,SUPABASE_KEY);
+const ADMIN_PASS='moneymakers2025';
+const loginBox=document.getElementById('loginBox');const panel=document.getElementById('panel');
+const pass=document.getElementById('pass');const enterBtn=document.getElementById('enterBtn');const loginErr=document.getElementById('loginErr');
+const tbody=document.getElementById('tbody');const total=document.getElementById('total');const search=document.getElementById('search');
+const loadErr=document.getElementById('loadErr');const hint=document.getElementById('hint');
+let allLeads=[];
+function isAuthed(){try{return sessionStorage.getItem('mm_admin_auth')==='1'}catch(e){return false}}
+function showPanel(){loginBox.hidden=true;panel.hidden=false;loadLeads()}
+function showLogin(){loginBox.hidden=false;panel.hidden=true}
+if(isAuthed())showPanel();
+enterBtn.addEventListener('click',()=>{loginErr.style.display='none';if(pass.value===ADMIN_PASS){try{sessionStorage.setItem('mm_admin_auth','1')}catch(e){}showPanel()}else{loginErr.textContent='Senha incorreta.';loginErr.style.display='block'}});
+pass.addEventListener('keydown',(e)=>{if(e.key==='Enter')enterBtn.click()});
+document.getElementById('logoutBtn').addEventListener('click',()=>{try{sessionStorage.removeItem('mm_admin_auth')}catch(e){}showLogin()});
+document.getElementById('refreshBtn').addEventListener('click',()=>loadLeads());
+document.getElementById('clearBtn').addEventListener('click',()=>{search.value='';render()});
+search.addEventListener('input',()=>render());
+document.getElementById('csvBtn').addEventListener('click',()=>{const rows=filtered();if(!rows.length)return;const head=['created_at','name','email','phone','whatsapp','source'];const esc=(v)=>'"'+String(v??'').replace(/"/g,'""')+'"';const csv=[head.join(',')].concat(rows.map(r=>head.map(h=>esc(r[h])).join(','))).join('\n');const blob=new Blob([csv],{type:'text/csv;charset=utf-8'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='leads-money-makers.csv';a.click()});
+function filtered(){const q=search.value.trim().toLowerCase();if(!q)return allLeads;return allLeads.filter(l=>(l.name||'').toLowerCase().includes(q)||(l.email||'').toLowerCase().includes(q))}
+function fmtDate(iso){try{return new Date(iso).toLocaleString('pt-BR')}catch(e){return iso||'—'}}
+function render(){const rows=filtered();total.textContent=String(allLeads.length);
+if(!rows.length){tbody.innerHTML='<tr><td colspan=\'5\'><div class=\'state\'>'+(allLeads.length?'Nenhum lead encontrado para esta busca.':'Nenhum lead ainda. Faça um teste no formulário da landing.')+'</div></td></tr>';hint.textContent=allLeads.length?rows.length+' resultado(s) para o filtro atual.':'';return}
+tbody.innerHTML=rows.map(r=>{const phone=r.phone||r.whatsapp||'—';return '<tr><td>'+fmtDate(r.created_at)+'</td><td><b>'+escapeHtml(r.name||'—')+'</b></td><td>'+escapeHtml(r.email||'—')+'</td><td>'+escapeHtml(phone)+'</td><td>'+escapeHtml(r.source||'—')+'</td></tr>'}).join('');
+hint.textContent='Exibindo '+rows.length+' de '+allLeads.length+' lead(s).'}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+async function loadLeads(){loadErr.style.display='none';tbody.innerHTML='<tr><td colspan=\'5\'><div class=\'state\'>Carregando leads…</div></td></tr>';
+try{const {data,error}=await supabase.from('mentorship_leads').select('*').order('created_at',{ascending:false}).limit(500);if(error)throw error;allLeads=data||[];render()}catch(e){console.warn(e);tbody.innerHTML='<tr><td colspan=\'5\'><div class=\'state\'>Erro ao carregar. Verifique RLS/conexão e tente atualizar.</div></td></tr>';loadErr.textContent='⚠️ Falha ao listar leads: '+(e.message||e)+' — libere SELECT/INSERT anônimo na tabela mentorship_leads.';loadErr.style.display='block'}}
 </script>
 </body>
 </html>
