@@ -1,42 +1,36 @@
-# Money Makers I.A — Mentoria Exclusiva
+# LuminaShop — Loja virtual completa
 
-Landing page estática (HTML + CSS + JS) da Mentoria Money Makers I.A com captura de leads integrada ao Supabase (Lovable Cloud) e painel interno de leads.
+Loja reconstruída do zero em HTML estático + Supabase (Lovable Cloud). Rápida, responsiva e pronta para produção.
 
-## O que já existe
+## Estrutura
 
-- `index.html` — landing completa: hero, countdown 72h, nav, prova, 4 pilares, como funciona, depoimentos, bônus/garantia, oferta (R$ 139,89), formulário de captura, FAQ, live, footer, CTAs de WhatsApp.
-- `admin.html` — painel interno de leads (visual dark/neon): lista `mentorship_leads` ordenado por `created_at desc`, busca por nome/e-mail, contador total, exportar CSV, estados de loading/vazio/erro.
-- `src/integrations/supabase/client.ts` — client Supabase do projeto (não duplicar).
+- `index.html` — vitrine SPA completa: header (logo, busca com debounce, suporte Telegram, carrinho com badge), nav de categorias, hero principal + 2 secundários, grade de categorias, Destaques, Mais Vendidos, catálogo com filtro por categoria + ordenação + busca, modal de produto (galeria, qtd, frete simulado), drawer do carrinho (localStorage, alterar qtd/remover), checkout em 3 passos (dados → entrega → pagamento Pix/cartão/boleto) salvando em `orders`/`order_items`, tela de confirmação com código, footer e botão flutuante Telegram.
+- `admin.html` — painel do lojista (fora do Google, `noindex`): login de sessão (`loja-admin-2025`), aba Produtos (CRUD: nome, preço, oferta, estoque, categoria, imagens, descrição, destaque/mais vendido/ativo) e aba Pedidos (busca por código/nome, status editável, itens).
+- `src/integrations/supabase/client.ts` — client oficial Lovable Cloud (URL `sqpevkuahatlcjhcseqv` + chave real).
 
-## Captura de leads
+## Banco (Lovable Cloud)
 
-- Formulário em `#captura` (`index.html`): nome, WhatsApp com máscara `(11) 99999-9999`, e-mail e aceite LGPD obrigatório.
-- Validação no front + botão com loading (`ENVIANDO...` desabilitado).
-- Insert tenta `name, email, phone, whatsapp, source` (`source='landing_mm_ia'`) e faz fallback automático para `name, email, phone, source` se a coluna `whatsapp` ainda não existir.
-- Sucesso mostra `✅ Cadastro recebido!` e abre o WhatsApp oficial; falha mostra `⚠️ Não foi possível salvar...` (só aparece em falha real) e mesmo assim abre o WhatsApp para não perder a conversão.
+Tabelas esperadas:
 
-## Tabela `mentorship_leads` + RLS
+- `categories(id uuid/text, name, slug, icon)`
+- `products(id uuid, category_id, name, description, price numeric, compare_at_price numeric, stock int, images text[], featured bool, best_seller bool, active bool, rating numeric, created_at)`
+- `orders(id uuid, code, customer_name, email, phone, cep, address, city, uf, complement, payment_method, status, subtotal, shipping, discount, total, created_at)`
+- `order_items(id uuid, order_id ref, product_id text, name, qty, price)`
 
-Colunas esperadas: `id uuid PK`, `name text`, `email text`, `phone text`, `whatsapp text` (opcional, recomendado), `source text`, `created_at timestamptz default now()`.
+RLS: leitura pública (`SELECT` para `anon` em categories/products ativos) + `INSERT` público em orders/order_items para o checkout funcionar sem login. O `admin.html` usa a chave publicável, então mantenha-o com `noindex` e troque `ADMIN_PASS`.
 
-Para a captura anônima funcionar, libere no banco (etapa SQL separada):
+> A vitrine tem fallback local: mesmo sem tabelas criadas ela exibe 12 produtos demo e o checkout gera o código do pedido. Com as tabelas criadas, tudo persiste de verdade.
 
-- `ENABLE ROW LEVEL SECURITY` na tabela;
-- policy de `INSERT` para `anon` (captura pública);
-- policy de `SELECT` para leitura do painel (idealmente restrita; hoje o painel usa a chave publicável, então mantenha o `admin.html` fora do índice/Google com `noindex` e senha de sessão).
+## Como rodar
 
-Se o insert falhar com erro de coluna/RLS, o formulário exibe o motivo no `admin.html` e no console, sem travar o redirecionamento ao WhatsApp.
+1. Sirva a pasta (ex: `npx serve .`) ou abra `index.html` no navegador.
+2. Abra `admin.html`, entre com a senha e cadastre categorias/produtos reais.
+3. Suporte: `https://t.me/luminashop_suporte` (troque pelo seu @ no `index.html`/`admin.html`).
 
-## WhatsApp oficial e lives
+## Checklist produção
 
-- WhatsApp: `https://wa.me/5511989353418` (mensagem personalizada com nome/e-mail/telefone do lead).
-- Lives: `https://meet.google.com/` (botão `ENTRAR NA LIVE`).
-
-## Como visualizar leads
-
-1. Abra `admin.html` no navegador.
-2. Digite a senha de sessão (padrão inicial `moneymakers2025` — troque a constante `ADMIN_PASS` no arquivo após publicar).
-3. Use a busca, o contador total e o botão `Exportar CSV`.
-4. Se der erro de leitura, confira as policies RLS de `mentorship_leads` e a conectividade com o Supabase.
-
-> Não há build/stack nova: é HTML estático + Supabase via CDN (`esm.sh`). Não criar `src/pages/` nem trocar o client existente.
+- [ ] Criar tabelas + RLS + seed no SQL do Lovable Cloud.
+- [ ] Trocar `ADMIN_PASS` e Telegram real.
+- [ ] Cadastrar produtos/categorias com fotos e estoque.
+- [ ] Testar busca, filtros, carrinho, checkout (Pix/cartão/boleto) no mobile e desktop.
+- [ ] Conferir pedidos no `admin.html`.

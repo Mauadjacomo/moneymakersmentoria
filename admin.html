@@ -1,103 +1,153 @@
 <!DOCTYPE html>
 <html lang='pt-BR'>
 <head>
-<meta charset='UTF-8' />
-<meta name='viewport' content='width=device-width, initial-scale=1.0' />
-<title>Admin Leads — Money Makers I.A</title>
-<meta name='robots' content='noindex,nofollow' />
+<meta charset='UTF-8'/>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+<title>Admin Loja — LuminaShop</title>
+<meta name='robots' content='noindex,nofollow'/>
 <style>
-:root{--neon:#00ffe7;--bg:#04050a;--card:#0b0f17;--line:rgba(255,255,255,.08);--muted:#9aa3ad;--danger:#ff3b3b}
+:root{--bg:#070b16;--card:#0e1528;--line:rgba(255,255,255,.1);--muted:#94a3b8;--brand:#a855f7;--neon:#22d3ee;--ok:#22c55e;--danger:#ef4444}
 *{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',Arial,sans-serif}
-body{background:radial-gradient(800px 400px at 20% 0%,rgba(0,255,231,.07),transparent),radial-gradient(700px 380px at 90% 10%,rgba(0,87,255,.14),transparent),var(--bg);color:#fff;min-height:100vh}
-.wrap{max-width:1080px;margin:0 auto;padding:32px 20px 60px}
-.top{display:flex;gap:14px;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;margin-bottom:18px}
-h1{font-size:clamp(1.4rem,3vw,1.8rem);font-weight:900;line-height:1.15}
-h1 span{color:var(--neon)}
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
-.badge{display:inline-block;padding:6px 13px;border-radius:999px;background:rgba(0,255,231,.12);border:1px solid rgba(0,255,231,.32);font-size:.78rem;font-weight:800;letter-spacing:.4px}
-.row{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
-input[type=text],input[type=password],input[type=search]{padding:13px 15px;border-radius:12px;border:1px solid rgba(255,255,255,.13);background:#080d18;color:#fff;font-size:.95rem;min-width:220px;flex:1}
-input:focus{outline:2px solid var(--neon);border-color:var(--neon)}
-button{background:var(--neon);color:#000;border:none;border-radius:12px;padding:13px 18px;font-weight:900;cursor:pointer;transition:.15s}
-button:hover{filter:brightness(1.05)}
-button:disabled{opacity:.6;cursor:wait}
+body{background:radial-gradient(800px 400px at 20% 0%,rgba(168,85,247,.12),transparent),var(--bg);color:#fff;min-height:100vh}
+.wrap{max-width:1120px;margin:0 auto;padding:28px 18px 60px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
+.badge{display:inline-block;padding:6px 12px;border-radius:999px;background:rgba(34,211,238,.12);border:1px solid rgba(34,211,238,.35);font-size:.75rem;font-weight:800}
+h1{font-size:1.5rem;margin-top:8px}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+input,select,textarea{padding:11px 13px;border-radius:10px;border:1px solid var(--line);background:#080d1c;color:#fff;font-size:.92rem;flex:1;min-width:150px}
+textarea{min-height:70px;resize:vertical}
+button{background:var(--neon);border:none;border-radius:10px;padding:11px 16px;font-weight:900;cursor:pointer;color:#001018}
 button.ghost{background:transparent;color:var(--neon);border:1px solid var(--neon)}
-.muted{color:var(--muted);font-size:.9rem}
-.actions{display:flex;gap:10px;flex-wrap:wrap}
-.table-wrap{overflow:auto;margin-top:12px;border-radius:12px;border:1px solid var(--line);max-height:62vh}
-table{width:100%;border-collapse:collapse;min-width:720px;background:#0a0f1c}
-th,td{padding:13px 15px;text-align:left;border-bottom:1px solid rgba(255,255,255,.06);font-size:.9rem}
-th{background:#0b1224;color:#dbe3ea;position:sticky;top:0;z-index:1}
-tr:hover td{background:#0d1528}
-.state{padding:28px;text-align:center;color:var(--muted)}
-.error{background:rgba(255,59,59,.1);border:1px solid rgba(255,59,59,.4);color:#ffc9c9;padding:13px;border-radius:12px;margin-top:12px;display:none}
-.count{font-weight:900;color:var(--neon)}
-a{color:var(--neon)}
-.login{max-width:430px;margin:10vh auto}
-.login h1{margin-bottom:8px}
-.login .card{padding:28px}
-@media(max-width:640px){.wrap{padding:22px 14px 48px}.top{align-items:stretch;flex-direction:column}.actions button{flex:1}}
+button.danger{background:transparent;color:#fca5a5;border:1px solid var(--danger)}
+button:disabled{opacity:.6}
+.tabs{display:flex;gap:8px;margin:14px 0}
+.tab{padding:10px 18px;border-radius:999px;border:1px solid var(--line);background:transparent;color:#fff;cursor:pointer;font-weight:800}
+.tab.on{background:#fff;color:#000}
+table{width:100%;border-collapse:collapse;min-width:760px}
+th,td{padding:11px 12px;border-bottom:1px solid var(--line);font-size:.88rem;text-align:left;vertical-align:top}
+th{color:#cbd5e1;font-size:.75rem;text-transform:uppercase;letter-spacing:.5px}
+.twrap{overflow:auto;border:1px solid var(--line);border-radius:12px;max-height:60vh}
+.muted{color:var(--muted);font-size:.88rem}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.err{background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.4);padding:11px;border-radius:10px;margin-top:10px;display:none;color:#fecaca}
+.ok{background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.4);padding:11px;border-radius:10px;margin-top:10px;display:none;color:#bbf7d0}
+.login{max-width:420px;margin:10vh auto}
+.pill{font-size:.72rem;padding:4px 10px;border-radius:999px;background:#1e293b;font-weight:800}
+@media(max-width:700px){.grid2{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <div class='wrap'>
 <div id='loginBox' class='login'><div class='card'>
-<span class='badge'>MONEY MAKERS I.A • ADMIN</span>
-<h1 style='margin-top:10px'>Admin <span>Leads</span></h1>
-<p class='muted'>Área interna. Digite a senha de acesso para visualizar os leads capturados.</p>
-<div class='row'><input id='pass' type='password' placeholder='Senha de acesso' autocomplete='current-password' /></div>
+<span class='badge'>LUMINASHOP • ADMIN</span><h1>Gestão da loja</h1>
+<p class='muted'>Produtos e pedidos. Acesso interno do lojista.</p>
+<div class='row'><input id='pass' type='password' placeholder='Senha de acesso'/></div>
 <div class='row'><button id='enterBtn' style='width:100%'>ENTRAR</button></div>
-<p class='muted'>A senha padrão inicial é <b>moneymakers2025</b> — troque a constante ADMIN_PASS no código após publicar.</p>
-<p class='muted' style='margin-top:8px'><a href='index.html'>← Voltar para a landing</a></p>
-<div class='error' id='loginErr'></div>
+<p class='muted'>Senha inicial: <b>loja-admin-2025</b> — troque ADMIN_PASS no código.</p>
+<p class='muted'><a href='index.html' style='color:var(--neon)'>← Voltar para a loja</a></p>
+<div class='err' id='loginErr'></div>
 </div></div>
 <div id='panel' hidden>
-<div class='top'>
-<div><span class='badge'>MONEY MAKERS I.A • PAINEL</span><h1 style='margin-top:8px'>Leads capturados <span id='total' class='count'>—</span></h1><p class='muted'>Tabela <b>mentorship_leads</b> • ordenado por <b>created_at desc</b></p></div>
-<div class='actions'><button class='ghost' id='logoutBtn'>Sair</button><button id='refreshBtn'>Atualizar</button><button class='ghost' id='csvBtn'>Exportar CSV</button></div>
+<div style='display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:end'>
+<div><span class='badge'>LUMINASHOP • PAINEL</span><h1>Produtos e Pedidos</h1><p class='muted'>Tabelas <b>products</b> • <b>orders</b> • <b>order_items</b></p></div>
+<div class='row' style='margin:0'><button class='ghost' id='logoutBtn'>Sair</button><a href='index.html' style='align-self:center;color:var(--neon)'>Ver loja →</a></div>
 </div>
+<div class='tabs'><button class='tab on' id='tabP'>📦 Produtos</button><button class='tab' id='tabO'>🧾 Pedidos</button></div>
+<div id='viewP'>
 <div class='card'>
-<div class='row'><input id='search' type='search' placeholder='Buscar por nome ou e-mail…' aria-label='Buscar por nome ou e-mail' /><button class='ghost' id='clearBtn'>Limpar</button></div>
-<div class='error' id='loadErr'></div>
-<div class='table-wrap'><table>
-<thead><tr><th>Data</th><th>Nome</th><th>E-mail</th><th>Telefone / WhatsApp</th><th>Origem</th></tr></thead>
-<tbody id='tbody'><tr><td colspan='5'><div class='state'>Carregando…</div></td></tr></tbody>
-</table></div>
-<p class='muted' id='hint' style='margin-top:10px'></p>
+<h3 id='formTitle'>Novo produto</h3>
+<div class='grid2' style='margin-top:10px'>
+<input id='pName' placeholder='Nome *'/>
+<input id='pPrice' type='number' step='0.01' placeholder='Preço * ex: 199.90'/>
+<input id='pOld' type='number' step='0.01' placeholder='Preço antigo (oferta)'/>
+<input id='pStock' type='number' placeholder='Estoque'/>
+<input id='pCat' placeholder='Categoria (id ou nome) ex: eletronicos'/>
+<input id='pRating' type='number' step='0.1' placeholder='Avaliação 0-5'/>
+</div>
+<div class='row'><input id='pImgs' placeholder='Imagens (URLs separadas por vírgula)'/></div>
+<div class='row'><textarea id='pDesc' placeholder='Descrição'></textarea></div>
+<div class='row'>
+<label class='muted'><input type='checkbox' id='pFeat' style='flex:none;min-width:auto'/> Destaque</label>
+<label class='muted'><input type='checkbox' id='pBest' style='flex:none;min-width:auto'/> Mais vendido</label>
+<label class='muted'><input type='checkbox' id='pActive' checked style='flex:none;min-width:auto'/> Ativo</label>
+</div>
+<div class='row'><button id='saveBtn'>Salvar produto</button><button class='ghost' id='clearBtn'>Limpar</button></div>
+<div class='err' id='pErr'></div><div class='ok' id='pOk'></div>
+</div>
+<div class='card' style='margin-top:14px'>
+<div class='row'><input id='pSearch' type='search' placeholder='Buscar produto...'/><button class='ghost' id='pReload'>Atualizar</button></div>
+<div class='twrap'><table><thead><tr><th>Produto</th><th>Preço</th><th>Estoque</th><th>Flags</th><th>Ações</th></tr></thead><tbody id='pBody'></tbody></table></div>
+<p class='muted' id='pHint'></p>
+</div>
+</div>
+<div id='viewO' hidden>
+<div class='card'>
+<div class='row'><input id='oSearch' type='search' placeholder='Buscar por código, nome ou e-mail...'/><button class='ghost' id='oReload'>Atualizar</button></div>
+<div class='twrap'><table><thead><tr><th>Código / Data</th><th>Cliente</th><th>Total</th><th>Pagamento</th><th>Status</th></tr></thead><tbody id='oBody'></tbody></table></div>
+<p class='muted' id='oHint'></p>
+</div>
+<div class='card' style='margin-top:14px'><h3>Itens do pedido</h3><p class='muted'>Clique num pedido para ver os itens.</p><div id='oItems' class='muted' style='margin-top:8px'>Nenhum pedido selecionado.</div></div>
 </div>
 </div>
 </div>
 <script type='module'>
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
-const SUPABASE_URL='https://behxrckorrgbxmhjvxtb.supabase.co';
-const SUPABASE_KEY='sb_publishable_85rBSrDBLsx0KmXEvOBWIw_uACQ-8ly';
-const supabase=createClient(SUPABASE_URL,SUPABASE_KEY);
-const ADMIN_PASS='moneymakers2025';
-const loginBox=document.getElementById('loginBox');const panel=document.getElementById('panel');
-const pass=document.getElementById('pass');const enterBtn=document.getElementById('enterBtn');const loginErr=document.getElementById('loginErr');
-const tbody=document.getElementById('tbody');const total=document.getElementById('total');const search=document.getElementById('search');
-const loadErr=document.getElementById('loadErr');const hint=document.getElementById('hint');
-let allLeads=[];
-function isAuthed(){try{return sessionStorage.getItem('mm_admin_auth')==='1'}catch(e){return false}}
-function showPanel(){loginBox.hidden=true;panel.hidden=false;loadLeads()}
-function showLogin(){loginBox.hidden=false;panel.hidden=true}
-if(isAuthed())showPanel();
-enterBtn.addEventListener('click',()=>{loginErr.style.display='none';if(pass.value===ADMIN_PASS){try{sessionStorage.setItem('mm_admin_auth','1')}catch(e){}showPanel()}else{loginErr.textContent='Senha incorreta.';loginErr.style.display='block'}});
-pass.addEventListener('keydown',(e)=>{if(e.key==='Enter')enterBtn.click()});
-document.getElementById('logoutBtn').addEventListener('click',()=>{try{sessionStorage.removeItem('mm_admin_auth')}catch(e){}showLogin()});
-document.getElementById('refreshBtn').addEventListener('click',()=>loadLeads());
-document.getElementById('clearBtn').addEventListener('click',()=>{search.value='';render()});
-search.addEventListener('input',()=>render());
-document.getElementById('csvBtn').addEventListener('click',()=>{const rows=filtered();if(!rows.length)return;const head=['created_at','name','email','phone','whatsapp','source'];const esc=(v)=>'"'+String(v??'').replace(/"/g,'""')+'"';const csv=[head.join(',')].concat(rows.map(r=>head.map(h=>esc(r[h])).join(','))).join('\n');const blob=new Blob([csv],{type:'text/csv;charset=utf-8'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='leads-money-makers.csv';a.click()});
-function filtered(){const q=search.value.trim().toLowerCase();if(!q)return allLeads;return allLeads.filter(l=>(l.name||'').toLowerCase().includes(q)||(l.email||'').toLowerCase().includes(q))}
-function fmtDate(iso){try{return new Date(iso).toLocaleString('pt-BR')}catch(e){return iso||'—'}}
-function render(){const rows=filtered();total.textContent=String(allLeads.length);
-if(!rows.length){tbody.innerHTML='<tr><td colspan=\'5\'><div class=\'state\'>'+(allLeads.length?'Nenhum lead encontrado para esta busca.':'Nenhum lead ainda. Faça um teste no formulário da landing.')+'</div></td></tr>';hint.textContent=allLeads.length?rows.length+' resultado(s) para o filtro atual.':'';return}
-tbody.innerHTML=rows.map(r=>{const phone=r.phone||r.whatsapp||'—';return '<tr><td>'+fmtDate(r.created_at)+'</td><td><b>'+escapeHtml(r.name||'—')+'</b></td><td>'+escapeHtml(r.email||'—')+'</td><td>'+escapeHtml(phone)+'</td><td>'+escapeHtml(r.source||'—')+'</td></tr>'}).join('');
-hint.textContent='Exibindo '+rows.length+' de '+allLeads.length+' lead(s).'}
-function escapeHtml(s){return String(s).replace(/[&<>"']/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-async function loadLeads(){loadErr.style.display='none';tbody.innerHTML='<tr><td colspan=\'5\'><div class=\'state\'>Carregando leads…</div></td></tr>';
-try{const {data,error}=await supabase.from('mentorship_leads').select('*').order('created_at',{ascending:false}).limit(500);if(error)throw error;allLeads=data||[];render()}catch(e){console.warn(e);tbody.innerHTML='<tr><td colspan=\'5\'><div class=\'state\'>Erro ao carregar. Verifique RLS/conexão e tente atualizar.</div></td></tr>';loadErr.textContent='⚠️ Falha ao listar leads: '+(e.message||e)+' — libere SELECT/INSERT anônimo na tabela mentorship_leads.';loadErr.style.display='block'}}
+const supabase=createClient('https://sqpevkuahatlcjhcseqv.supabase.co','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNxcGV2a3VhaGF0bGNqaGNzZXF2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjUyNDQyNTYsImV4cCI6MjA4MDgyMDI1Nn0.QXZR-IbpjL_RqCwTYG8IJupML6zGtB6XKFbAovkR3x0');
+const ADMIN_PASS='loja-admin-2025';
+const $=id=>document.getElementById(id);
+let products=[],orders=[],editing=null;
+const authed=()=>{try{return sessionStorage.getItem('lumina_admin')==='1'}catch(e){return false}};
+if(authed())showPanel();
+$('enterBtn').onclick=()=>{if($('pass').value===ADMIN_PASS){try{sessionStorage.setItem('lumina_admin','1')}catch(e){}showPanel()}else{$('loginErr').textContent='Senha incorreta.';$('loginErr').style.display='block'}};
+$('logoutBtn').onclick=()=>{try{sessionStorage.removeItem('lumina_admin')}catch(e){}location.reload()};
+function showPanel(){$('loginBox').hidden=true;$('panel').hidden=false;loadProducts();loadOrders()}
+$('tabP').onclick=()=>{$('tabP').classList.add('on');$('tabO').classList.remove('on');$('viewP').hidden=false;$('viewO').hidden=true};
+$('tabO').onclick=()=>{$('tabO').classList.add('on');$('tabP').classList.remove('on');$('viewO').hidden=false;$('viewP').hidden=true};
+function msg(ok,t){const e=$(ok?'pOk':'pErr');e.textContent=t;e.style.display='block';setTimeout(()=>e.style.display='none',3500)}
+async function loadProducts(){
+$('pBody').innerHTML="<tr><td colspan='5' style='text-align:center;color:var(--muted)'>Carregando...</td></tr>";
+try{const r=await supabase.from('products').select('*').order('created_at',{ascending:false}).limit(200);
+if(r.error)throw r.error;products=r.data||[];renderP();}
+catch(e){$('pBody').innerHTML="<tr><td colspan='5' style='text-align:center'>Erro: "+(e.message||e)+"<br/>Crie a tabela products (veja README).</td></tr>"}}
+function renderP(){
+const q=($('pSearch').value||'').toLowerCase();
+const list=products.filter(p=>!q||(p.name||'').toLowerCase().includes(q));
+$('pHint').textContent=list.length+' produto(s)';
+if(!list.length){$('pBody').innerHTML="<tr><td colspan='5' style='text-align:center;color:var(--muted)'>Nenhum produto. Cadastre o primeiro acima.</td></tr>";return}
+$('pBody').innerHTML=list.map(p=>"<tr><td><b>"+esc(p.name)+"</b><br/><span class='muted'>"+esc(p.category_id||'')+" • "+esc((p.description||'').slice(0,60))+"</span></td><td>R$ "+Number(p.price||0).toFixed(2)+"</td><td>"+(p.stock??'—')+"</td><td><span class='pill'>"+(p.featured?'⭐':'')+(p.best_seller?' 🔥':'')+(p.active===false?' ⏸️':' ✅')+"</span></td><td><button class='ghost' data-ed='"+p.id+"'>Editar</button> <button class='danger' data-del='"+p.id+"'>Excluir</button></td></tr>").join('');
+$('pBody').querySelectorAll('[data-ed]').forEach(b=>b.onclick=()=>{const p=products.find(x=>String(x.id)===b.getAttribute('data-ed'));if(!p)return;editing=p.id;$('formTitle').textContent='Editar: '+p.name;$('pName').value=p.name||'';$('pPrice').value=p.price||'';$('pOld').value=p.compare_at_price||p.compare_price||'';$('pStock').value=p.stock||'';$('pCat').value=p.category_id||p.category||'';$('pRating').value=p.rating||'';const im=Array.isArray(p.images)?p.images.join(', '):(p.images||'');$('pImgs').value=im;$('pDesc').value=p.description||'';$('pFeat').checked=!!p.featured;$('pBest').checked=!!p.best_seller;$('pActive').checked=p.active!==false;window.scrollTo({top:0,behavior:'smooth'})});
+$('pBody').querySelectorAll('[data-del]').forEach(b=>b.onclick=async()=>{if(!confirm('Excluir produto?'))return;const r=await supabase.from('products').delete().eq('id',b.getAttribute('data-del'));if(r.error)alert(r.error.message);else loadProducts()});}
+function esc(s){return String(s??'').replace(/[&<>\"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+$('pReload').onclick=loadProducts;$('pSearch').oninput=renderP;
+$('clearBtn').onclick=()=>{editing=null;$('formTitle').textContent='Novo produto';['pName','pPrice','pOld','pStock','pCat','pRating','pImgs','pDesc'].forEach(id=>$(id).value='')};
+$('saveBtn').onclick=async()=>{
+const name=$('pName').value.trim(),price=Number($('pPrice').value);
+if(name.length<2){msg(false,'Informe o nome.');return}
+if(!(price>0)){msg(false,'Informe um preço válido.');return}
+const payload={name,price,compare_at_price:Number($('pOld').value)||null,stock:Number($('pStock').value)||0,category_id:$('pCat').value.trim()||null,rating:Number($('pRating').value)||4.5,images:$('pImgs').value.split(',').map(s=>s.trim()).filter(Boolean),description:$('pDesc').value.trim(),featured:$('pFeat').checked,best_seller:$('pBest').checked,active:$('pActive').checked};
+$('saveBtn').disabled=true;
+try{
+let r;
+if(editing)r=await supabase.from('products').update(payload).eq('id',editing);
+else r=await supabase.from('products').insert([payload]);
+if(r.error)throw r.error;
+msg(true,'✅ Produto salvo!');$('clearBtn').click();loadProducts();
+}catch(e){msg(false,'Erro: '+(e.message||e))}
+$('saveBtn').disabled=false};
+async function loadOrders(){
+$('oBody').innerHTML="<tr><td colspan='5' style='text-align:center;color:var(--muted)'>Carregando...</td></tr>";
+try{const r=await supabase.from('orders').select('*').order('created_at',{ascending:false}).limit(200);
+if(r.error)throw r.error;orders=r.data||[];renderO();}
+catch(e){$('oBody').innerHTML="<tr><td colspan='5' style='text-align:center'>Erro: "+(e.message||e)+"</td></tr>"}}
+function renderO(){
+const q=($('oSearch').value||'').toLowerCase();
+const list=orders.filter(o=>!q||(o.code||'').toLowerCase().includes(q)||(o.customer_name||'').toLowerCase().includes(q)||(o.email||'').toLowerCase().includes(q));
+$('oHint').textContent=list.length+' pedido(s)';
+if(!list.length){$('oBody').innerHTML="<tr><td colspan='5' style='text-align:center;color:var(--muted)'>Nenhum pedido ainda.</td></tr>";return}
+$('oBody').innerHTML=list.map(o=>"<tr data-oid='"+o.id+"' style='cursor:pointer'><td><b>"+esc(o.code||o.id.slice(0,8))+"</b><br/><span class='muted'>"+esc(new Date(o.created_at).toLocaleString('pt-BR'))+"</span></td><td>"+esc(o.customer_name||'—')+"<br/><span class='muted'>"+esc(o.email||'')+"</span></td><td><b>R$ "+Number(o.total||0).toFixed(2)+"</b></td><td>"+esc(o.payment_method||'')+"</td><td><select data-st='"+o.id+"'>"+['pendente','pago','enviado','entregue','cancelado'].map(s=>"<option "+(o.status===s?'selected':'')+" value='"+s+"'>"+s+"</option>").join('')+"</select></td></tr>").join('');
+$('oBody').querySelectorAll('[data-st]').forEach(s=>s.onchange=async e=>{e.stopPropagation();await supabase.from('orders').update({status:s.value}).eq('id',s.getAttribute('data-st'));loadOrders()});
+$('oBody').querySelectorAll('tr[data-oid]').forEach(tr=>tr.onclick=async e=>{if(e.target.tagName==='SELECT')return;const id=tr.getAttribute('data-oid');try{const r=await supabase.from('order_items').select('*').eq('order_id',id);$('oItems').innerHTML=(r.data||[]).map(i=>"• "+esc(i.name||i.product_id)+" — "+i.qty+"x R$ "+Number(i.price||0).toFixed(2)).join('<br/>')||'Sem itens.'}catch(err){$('oItems').textContent='Erro ao carregar itens.'}})}
+$('oReload').onclick=loadOrders;$('oSearch').oninput=renderO;
 </script>
 </body>
 </html>

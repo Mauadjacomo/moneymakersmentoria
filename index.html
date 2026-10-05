@@ -1,287 +1,311 @@
 <!DOCTYPE html>
 <html lang='pt-BR'>
 <head>
-<meta charset='UTF-8' />
-<meta name='viewport' content='width=device-width, initial-scale=1.0' />
-<title>Money Makers I.A — Mentoria Exclusiva | Automação com IA</title>
-<meta name='description' content='Mentoria Money Makers I.A: método prático de automação com IA para eliminar tarefas manuais e escalar com eficiência. Oferta de lançamento por R$ 139,89.' />
-<meta name='theme-color' content='#04050a' />
-<meta property='og:type' content='website' />
-<meta property='og:title' content='Money Makers I.A — Mentoria Exclusiva' />
-<meta property='og:description' content='Transforme processos manuais em sistemas automatizados com IA. De R$ 677,89 por R$ 139,89.' />
-<meta property='og:image' content='https://images.unsplash.com/photo-1591696205602-2f950c417cb9?q=80&w=1200&auto=format&fit=crop' />
-<link rel='icon' href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
-<script type='application/ld+json'>{"@context":"https://schema.org","@type":"Course","name":"Money Makers I.A","offers":{"@type":"Offer","price":"139.89","priceCurrency":"BRL"}}</script>
+<meta charset='UTF-8'/>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+<title>LuminaShop — Sua loja completa</title>
+<meta name='description' content='LuminaShop: eletrônicos, moda, casa e mais. Ofertas, busca, categorias, carrinho e checkout rápido.'/>
+<meta name='theme-color' content='#0f172a'/>
+<link rel='icon' href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛍️</text></svg>"/>
 <style>
-:root{--neon:#00ffe7;--blue:#0057ff;--bg:#04050a;--card:#0b0f17;--line:rgba(255,255,255,.08);--muted:#9aa3ad;--danger:#ff3b3b;--green:#00e676;--radius:22px}
-*{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',Arial,sans-serif}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:#fff;line-height:1.6;overflow-x:hidden}
-img{max-width:100%;display:block}
-a{color:inherit}
-.container{max-width:1100px;margin:0 auto;padding:0 20px}
-.hero{min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:88px 20px 56px;position:relative;background:#04050a url('https://images.unsplash.com/photo-1591696205602-2f950c417cb9?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(900px 420px at 15% 10%,rgba(0,255,231,.16),transparent 60%),radial-gradient(700px 380px at 85% 15%,rgba(0,87,255,.28),transparent 60%),linear-gradient(180deg,rgba(4,5,10,.78),rgba(4,5,10,.94))}
-.hero-inner{position:relative;z-index:1;max-width:920px;margin:0 auto}
-.badge{display:inline-block;padding:8px 18px;border-radius:999px;background:rgba(0,255,231,.13);border:1px solid rgba(0,255,231,.4);margin-bottom:14px;font-weight:800;font-size:.88rem;letter-spacing:.2px}
-.badge-live{display:inline-flex;align-items:center;gap:8px;margin-bottom:12px;padding:7px 15px;border-radius:999px;background:rgba(255,59,59,.14);border:1px solid rgba(255,59,59,.45);font-size:.8rem;font-weight:800;letter-spacing:.4px}
-.dot{width:9px;height:9px;border-radius:50%;background:#ff3b3b;box-shadow:0 0 12px #ff3b3b;animation:pulse 1.2s infinite}
-@keyframes pulse{50%{opacity:.35}}
-.h1{font-size:clamp(2rem,4.6vw,3.5rem);font-weight:900;line-height:1.12;letter-spacing:-.5px;margin:6px auto 0}
-.h1 span{color:var(--neon)}
-.sub{max-width:760px;margin:16px auto 26px;font-size:clamp(1rem,1.6vw,1.12rem);color:#d6dee7}
-.cta{background:var(--neon);color:#001210;border:none;border-radius:16px;padding:18px 28px;font-weight:900;font-size:1.02rem;cursor:pointer;transition:.2s;display:inline-block;text-decoration:none;line-height:1.2}
-.cta:hover{transform:translateY(-2px);box-shadow:0 16px 38px rgba(0,255,231,.28)}
-.cta:disabled{opacity:.6;cursor:wait;transform:none}
-.cta-ghost{background:transparent;color:var(--neon);border:1px solid var(--neon);border-radius:16px;padding:15px 24px;font-weight:800;cursor:pointer;text-decoration:none;display:inline-block}
-.countdown{display:flex;gap:10px;justify-content:center;margin:24px 0 10px;flex-wrap:wrap}
-.cd{background:rgba(12,18,32,.92);border:1px solid var(--line);border-radius:14px;padding:12px 16px;min-width:82px}
-.cd span{font-size:1.7rem;font-weight:900;font-variant-numeric:tabular-nums}
-.cd small{display:block;font-size:.7rem;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.6px}
-.micro{font-size:.86rem;color:#c2cad4;margin-top:12px}
-.nav{position:sticky;top:0;z-index:20;background:rgba(6,9,18,.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav-in{max-width:1100px;margin:0 auto;display:flex;gap:14px;justify-content:center;align-items:center;padding:12px 18px}
-.nav-links{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;align-items:center}
-.nav-links a{color:#cfd7df;text-decoration:none;font-weight:700;font-size:.94rem}
-.nav-links a:hover{color:var(--neon)}
-.nav-cta{background:var(--neon);color:#000!important;padding:9px 18px;border-radius:999px;font-size:.88rem!important}
-.menu-btn{display:none;background:none;border:1px solid var(--line);color:#fff;border-radius:10px;padding:8px 13px;font-size:1.15rem;cursor:pointer}
-.sec{padding:64px 0}
-.sec.alt{background:linear-gradient(180deg,rgba(255,255,255,.015),transparent)}
-.grid{display:grid;gap:18px}
-.g2{grid-template-columns:1fr 1fr}
-.g3{grid-template-columns:repeat(3,1fr)}
-.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px}
-.card-highlight{border-color:rgba(0,255,231,.38);box-shadow:0 0 42px rgba(0,255,231,.07)}
-.title{font-size:clamp(1.45rem,2.8vw,2rem);margin-bottom:12px;font-weight:900;line-height:1.2}
-.center{text-align:center}
-.center .title{margin-bottom:8px}
-.lead{color:var(--muted)}
-.muted{color:var(--muted)}
-.check{list-style:none;margin-top:14px;display:grid;gap:11px}
-.check li{padding-left:30px;position:relative;color:#d7dee6}
-.check li::before{content:'✔';position:absolute;left:0;color:var(--neon);font-weight:900}
-.tech{border-radius:var(--radius);background:linear-gradient(135deg,rgba(0,255,231,.14),rgba(0,87,255,.28)),url('https://images.unsplash.com/photo-1557438159-51eec7a6c9e8?q=80&w=1600&auto=format&fit=crop') center/cover;border:1px solid var(--line);min-height:260px}
-.step-num{font-size:2.3rem;font-weight:900;color:var(--neon);line-height:1}
-.card h3{margin:10px 0 8px;font-size:1.15rem}
-.avatar{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font-weight:900;background:linear-gradient(135deg,var(--neon),var(--blue));color:#000;flex-shrink:0}
-.stars{color:#ffd700;letter-spacing:2px;margin:10px 0 8px}
-.price-old{color:#9aa3ad;text-decoration:line-through;font-size:1.1rem}
-.price-new{font-size:clamp(2.6rem,5vw,3.3rem);color:#ff5b5b;font-weight:900;line-height:1;margin:4px 0}
-.price-inst{color:#d6f5ef;font-weight:800;margin-top:6px}
-.scarcity{color:#ffc9c9;font-weight:800;margin:12px 0 0}
-.selos{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
-.selo{font-size:.8rem;background:#0e1628;border:1px solid var(--line);padding:8px 13px;border-radius:999px;color:#cbd5df}
-.table-wrap{overflow-x:auto;margin-top:14px;border-radius:14px;border:1px solid var(--line)}
-table{width:100%;border-collapse:collapse;min-width:560px;background:#0a0f1c}
-th,td{border-bottom:1px solid var(--line);padding:14px 16px;text-align:left;font-size:.94rem}
-th{background:#0b1224;color:#e6edf4;font-size:.82rem;text-transform:uppercase;letter-spacing:.5px}
-tr:last-child td{border-bottom:none}
-.form label{display:block;font-weight:700;margin:14px 0 6px;font-size:.92rem}
-.form input[type=text],.form input[type=tel],.form input[type=email]{width:100%;padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,.13);background:#080d18;color:#fff;font-size:1rem}
-.form input:focus{outline:2px solid var(--neon);border-color:var(--neon)}
-.lgpd{display:flex;gap:10px;align-items:flex-start;margin-top:16px;background:#080d18;border:1px solid var(--line);border-radius:12px;padding:13px;cursor:pointer}
-.lgpd input{margin-top:4px;width:18px;height:18px;accent-color:#00ffe7;flex-shrink:0}
-.lgpd span{font-size:.85rem;color:#c6cfd8}
-.form-error{color:#ff8a8a;font-size:.87rem;min-height:20px;margin-top:8px}
-.form-ok{background:rgba(0,230,118,.12);border:1px solid rgba(0,230,118,.4);color:#b7ffd8;padding:14px;border-radius:12px;margin-top:12px;display:none}
-.form-err{background:rgba(255,59,59,.12);border:1px solid rgba(255,59,59,.4);color:#ffc9c9;padding:14px;border-radius:12px;margin-top:12px;display:none}
-.faq-item{border:1px solid var(--line);border-radius:14px;margin-bottom:10px;overflow:hidden;background:#0a0f1c}
-.faq-q{width:100%;text-align:left;background:none;border:none;color:#fff;font-weight:800;font-size:1rem;padding:17px 18px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease;color:var(--muted)}
-.faq-a p{padding:0 18px 18px}
-.faq-item.open .faq-a{max-height:320px}
-.fixed{position:fixed;bottom:18px;right:18px;z-index:30}
-.fixed .cta{border-radius:999px!important;padding:14px 22px!important;font-size:.94rem!important;box-shadow:0 10px 30px rgba(0,255,231,.32)}
-footer{background:#060912;border-top:1px solid var(--line);text-align:center;padding:40px 20px;color:#8f98a3;font-size:.9rem}
-footer a{color:var(--neon);text-decoration:none}
-.progress{height:9px;background:#101827;border-radius:999px;overflow:hidden;margin-top:12px}
-.progress i{display:block;height:100%;width:87%;background:linear-gradient(90deg,var(--neon),var(--blue));border-radius:999px}
-.btn-row{margin-top:20px;display:flex;gap:10px;flex-wrap:wrap}
-.pill-list{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:14px}
-@media(max-width:900px){.g2,.g3{grid-template-columns:1fr}.sec{padding:48px 0}.card{padding:24px}.tech{min-height:200px}}
-@media(max-width:820px){.nav-in{justify-content:space-between}.menu-btn{display:block}.nav-links{display:none;width:100%;flex-direction:column;text-align:center;padding:12px 0}.nav-links.open{display:flex}}
-@media(max-width:520px){.hero{padding:70px 16px 44px}.cta{width:100%;text-align:center}.btn-row .cta,.btn-row .cta-ghost{width:100%;text-align:center}.cd{min-width:70px;padding:10px 12px}.fixed{left:16px;right:16px}.fixed .cta{width:100%}}
+:root{--bg:#f6f7fb;--card:#ffffff;--ink:#0f172a;--muted:#64748b;--line:#e7eaf1;--brand:#6d28d9;--brand2:#a855f7;--accent:#06b6d4;--ok:#16a34a;--warn:#f59e0b;--danger:#ef4444;--radius:18px}
+*{box-sizing:border-box;margin:0;padding:0;font-family:Inter,'Segoe UI',Arial,sans-serif}
+body{background:var(--bg);color:var(--ink)}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+.topbar{background:#0f172a;color:#e2e8f0;font-size:.82rem}
+.topbar-in{max-width:1200px;margin:0 auto;padding:8px 20px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.header-in{max-width:1200px;margin:0 auto;padding:14px 20px;display:flex;gap:14px;align-items:center}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.35rem;letter-spacing:-.5px}
+.logo-mark{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;font-size:1.3rem}
+.logo small{display:block;font-size:.7rem;color:var(--muted);font-weight:700;letter-spacing:1.5px}
+.search{flex:1;display:flex;background:#fff;border:1px solid var(--line);border-radius:999px;overflow:hidden;min-width:180px}
+.search input{flex:1;border:none;padding:12px 16px;font-size:.95rem;outline:none;background:transparent}
+.search button{border:none;background:var(--ink);color:#fff;padding:0 20px;cursor:pointer;font-weight:800}
+.hbtn{border:1px solid var(--line);background:#fff;border-radius:999px;padding:10px 16px;cursor:pointer;font-weight:800;display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.hbtn.telegram{background:#229ED9;border-color:#229ED9;color:#fff}
+.hbtn.cart{background:var(--ink);color:#fff;border-color:var(--ink);position:relative}
+.badge{position:absolute;top:-8px;right:-6px;background:var(--danger);color:#fff;font-size:.72rem;min-width:22px;height:22px;border-radius:999px;display:grid;place-items:center;padding:0 6px;font-weight:900}
+.catnav{background:#fff;border-bottom:1px solid var(--line)}
+.catnav-in{max-width:1200px;margin:0 auto;padding:10px 20px;display:flex;gap:8px;overflow:auto}
+.chip{border:1px solid var(--line);background:#f8fafc;border-radius:999px;padding:8px 16px;font-size:.88rem;font-weight:700;cursor:pointer;white-space:nowrap}
+.chip.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+.hero{display:grid;grid-template-columns:2fr 1fr;gap:16px;margin:20px 0}
+.hero-main{border-radius:22px;overflow:hidden;position:relative;min-height:340px;background:linear-gradient(120deg,#6d28d9,#a855f7 55%,#06b6d4),url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1400&auto=format&fit=crop') center/cover;color:#fff;display:flex;align-items:flex-end}
+.hero-main::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,23,42,.82),rgba(15,23,42,.25))}
+.hero-txt{position:relative;padding:32px;max-width:560px}
+.hero-txt h1{font-size:clamp(1.6rem,3.4vw,2.6rem);line-height:1.05;letter-spacing:-.5px}
+.hero-txt p{opacity:.9;margin:10px 0 18px}
+.btn{border:none;border-radius:12px;padding:13px 20px;font-weight:900;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.btn-primary{background:#fff;color:#0f172a}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-brand{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff}
+.btn-ghost{background:#f1f5f9;color:var(--ink);border:1px solid var(--line)}
+.btn:disabled{opacity:.6;cursor:wait}
+.hero-side{display:grid;gap:16px}
+.mini{border-radius:22px;padding:22px;color:#fff;position:relative;overflow:hidden;min-height:162px;display:flex;flex-direction:column;justify-content:center}
+.mini.one{background:linear-gradient(135deg,#0f172a,#334155),url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=800&auto=format&fit=crop') center/cover}
+.mini.two{background:linear-gradient(135deg,#be123c,#fb7185),url('https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=800&auto=format&fit=crop') center/cover}
+.mini::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.38)}
+.mini>*{position:relative}
+.sec{margin:30px 0}
+.sec-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+.sec-head h2{font-size:1.35rem;letter-spacing:-.3px}
+.sec-head p{color:var(--muted);font-size:.9rem}
+.cats{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.cat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;text-align:center;cursor:pointer;transition:.15s}
+.cat:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.08)}
+.cat i{font-size:1.8rem}
+.cat b{display:block;margin-top:8px}
+.cat span{color:var(--muted);font-size:.82rem}
+.toolbar{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+.toolbar select,.toolbar input{border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:.9rem;background:#fff}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:.15s}
+.card:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(0,0,0,.1)}
+.pimg{aspect-ratio:1/1;background:#eef2f7;overflow:hidden;cursor:pointer;position:relative}
+.pimg img{width:100%;height:100%;object-fit:cover}
+.tag{position:absolute;top:10px;left:10px;background:var(--danger);color:#fff;font-size:.72rem;font-weight:900;padding:5px 10px;border-radius:999px}
+.tag.best{background:var(--ok)}
+.pbody{padding:14px;display:flex;flex-direction:column;gap:8px;flex:1}
+.pcat{font-size:.75rem;color:var(--muted);font-weight:800;text-transform:uppercase;letter-spacing:.6px}
+.pname{font-weight:800;line-height:1.3;cursor:pointer;min-height:42px}
+.stars{color:#f59e0b;font-size:.85rem}
+.price-row{display:flex;align-items:baseline;gap:8px}
+.price{font-weight:900;font-size:1.15rem}
+.old{color:var(--muted);text-decoration:line-through;font-size:.85rem}
+.add{margin-top:auto}
+.state{background:#fff;border:1px dashed var(--line);border-radius:18px;padding:34px;text-align:center;color:var(--muted)}
+.drawer-bg{position:fixed;inset:0;background:rgba(15,23,42,.5);opacity:0;pointer-events:none;transition:.2s;z-index:60}
+.drawer-bg.show{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(430px,100vw);background:#fff;z-index:61;transform:translateX(105%);transition:.25s;display:flex;flex-direction:column}
+.drawer.show{transform:none}
+.drawer header{padding:18px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line)}
+.items{flex:1;overflow:auto;padding:14px;display:flex;flex-direction:column;gap:10px}
+.item{display:flex;gap:10px;border:1px solid var(--line);border-radius:14px;padding:10px}
+.item img{width:64px;height:64px;border-radius:10px;object-fit:cover}
+.qty{display:flex;align-items:center;gap:8px;margin-top:8px}
+.qty button{width:30px;height:30px;border-radius:8px;border:1px solid var(--line);background:#f8fafc;cursor:pointer;font-weight:900}
+.drawer footer{padding:16px;border-top:1px solid var(--line)}
+.modal-bg{position:fixed;inset:0;background:rgba(15,23,42,.55);display:none;place-items:center;z-index:70;padding:16px}
+.modal-bg.show{display:grid}
+.modal{background:#fff;border-radius:22px;max-width:960px;width:100%;max-height:92vh;overflow:auto}
+.modal-in{display:grid;grid-template-columns:1fr 1fr}
+.mgal{padding:18px}
+.mgal img.main{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:16px}
+.thumbs{display:flex;gap:8px;margin-top:8px}
+.thumbs img{width:64px;height:64px;object-fit:cover;border-radius:10px;cursor:pointer;border:2px solid transparent}
+.thumbs img.sel{border-color:var(--brand)}
+.minfo{padding:22px}
+.minfo h2{font-size:1.5rem;line-height:1.2}
+.field{margin:10px 0}
+.field label{display:block;font-weight:800;font-size:.86rem;margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;border:1px solid var(--line);border-radius:12px;padding:12px;font-size:.95rem}
+.steps{display:flex;gap:8px;margin:14px 0}
+.step{flex:1;text-align:center;font-size:.78rem;font-weight:800;padding:8px;border-radius:999px;background:#f1f5f9;color:var(--muted)}
+.step.on{background:var(--ink);color:#fff}
+.pay{display:grid;gap:10px}
+.pay label{border:1px solid var(--line);border-radius:12px;padding:12px;display:flex;gap:10px;align-items:center;cursor:pointer}
+.pay input{width:18px;height:18px}
+.success{text-align:center;padding:34px 22px}
+.code{background:#f8fafc;border:1px dashed var(--brand);border-radius:14px;padding:14px;font-weight:900;font-size:1.2rem;margin:14px 0;color:var(--brand)}
+footer.site{background:#0f172a;color:#cbd5e1;margin-top:40px}
+.foot-in{max-width:1200px;margin:0 auto;padding:36px 20px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:20px}
+.foot-in h4{color:#fff;margin-bottom:10px}
+.foot-in a{display:block;padding:4px 0;font-size:.9rem;opacity:.9}
+.copy{border-top:1px solid rgba(255,255,255,.12);text-align:center;padding:14px;font-size:.82rem}
+.float-tele{position:fixed;bottom:18px;right:18px;z-index:50;background:#229ED9;color:#fff;border-radius:999px;padding:13px 18px;font-weight:900;display:flex;gap:8px;align-items:center;box-shadow:0 12px 30px rgba(34,158,217,.4);border:none;cursor:pointer}
+.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%) translateY(20px);background:#0f172a;color:#fff;padding:12px 18px;border-radius:999px;opacity:0;transition:.2s;z-index:90;font-size:.9rem;font-weight:700}
+.toast.show{opacity:1;transform:translateX(-50%)}
+@media(max-width:1000px){.grid{grid-template-columns:repeat(3,1fr)}.cats{grid-template-columns:repeat(3,1fr)}.modal-in{grid-template-columns:1fr}.foot-in{grid-template-columns:1fr 1fr}}
+@media(max-width:680px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.header-in{flex-wrap:wrap}.search{order:3;flex-basis:100%}.cats{grid-template-columns:repeat(2,1fr)}.foot-in{grid-template-columns:1fr}.hbtn span.txt{display:none}}
 </style>
 </head>
 <body>
-<section class='hero' id='topo'>
-<div class='hero-inner'>
-<div class='badge-live'><span class='dot'></span> VAGAS ABERTAS — TURMA DE LANÇAMENTO</div><br/>
-<div class='badge'>Money Makers I.A — Mentoria Exclusiva</div>
-<h1 class='h1'>Se você ainda gasta horas trabalhando, você está <span>deixando dinheiro na mesa.</span></h1>
-<p class='sub'>Método prático de automação com IA para transformar processos manuais em sistemas mais eficientes, previsíveis e escaláveis — mesmo começando do zero.</p>
-<a class='cta' href='#captura'>QUERO DESBLOQUEAR A MÁQUINA DE PRODUTIVIDADE COM IA</a>
-<div class='countdown' role='timer' aria-label='Contagem regressiva da oferta'>
-<div class='cd'><span id='d'>00</span><small>dias</small></div>
-<div class='cd'><span id='h'>00</span><small>horas</small></div>
-<div class='cd'><span id='m'>00</span><small>min</small></div>
-<div class='cd'><span id='s'>00</span><small>seg</small></div>
-</div>
-<p class='micro'>⏳ Oferta de lançamento termina em 72h • De <s>R$ 677,89</s> por <strong style='color:var(--neon)'>R$ 139,89</strong> • Garantia de 7 dias</p>
+<div class='topbar'><div class='topbar-in'><span>🚚 Frete grátis acima de R$ 199 • 7 dias de troca</span><span>💬 Suporte rápido no Telegram • Parcele em até 12x</span></div></div>
+<header class='header'><div class='header-in'>
+<a class='logo' href='#/' id='homeLink'><span class='logo-mark'>🛍️</span><span>LuminaShop<small>LOJA COMPLETA</small></span></a>
+<div class='search'><input id='q' placeholder='Buscar produtos... ex: fone, camisa, luminária' aria-label='Buscar produtos'/><button id='qBtn'>Buscar</button></div>
+<a class='hbtn telegram' href='https://t.me/luminashop_suporte' target='_blank' rel='noopener'>✈️ <span class='txt'>Suporte</span></a>
+<button class='hbtn cart' id='openCart'>🛒 <span class='txt'>Carrinho</span><span class='badge' id='cartCount'>0</span></button>
+</div></header>
+<nav class='catnav'><div class='catnav-in' id='catNav'></div></nav>
+<main class='container'>
+<section class='hero'>
+<div class='hero-main'><div class='hero-txt'>
+<span style='background:rgba(255,255,255,.2);padding:6px 12px;border-radius:999px;font-size:.8rem;font-weight:800'>MEGA SALE • ATÉ 50% OFF</span>
+<h1>Tudo para sua casa, estilo e tech em um só lugar</h1>
+<p>Ofertas novas toda semana, entrega rápida e pagamento seguro no Pix, cartão ou boleto.</p>
+<div style='display:flex;gap:10px;flex-wrap:wrap'><button class='btn btn-primary' onclick="document.getElementById('ofertas').scrollIntoView({behavior:'smooth'})">Ver ofertas 🔥</button><button class='btn btn-dark' onclick="document.getElementById('catalogo').scrollIntoView({behavior:'smooth'})">Explorar catálogo</button></div>
+</div></div>
+<div class='hero-side'>
+<div class='mini one'><div><b>Tech em oferta</b><h3 style='font-size:1.25rem'>Fones e smartwatch</h3><button class='btn btn-primary' data-cat='eletronicos' style='margin-top:10px;padding:10px 16px'>Comprar agora</button></div></div>
+<div class='mini two'><div><b>Moda nova estação</b><h3 style='font-size:1.25rem'>Até 40% OFF</h3><button class='btn btn-primary' data-cat='moda' style='margin-top:10px;padding:10px 16px'>Ver coleção</button></div></div>
 </div>
 </section>
-<nav class='nav' aria-label='Navegação principal'>
-<div class='nav-in'>
-<button class='menu-btn' aria-label='Abrir menu' onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
-<div class='nav-links' id='navLinks'>
-<a href='#paraquem'>Para quem</a>
-<a href='#segredo'>O método</a>
-<a href='#como-funciona'>Como funciona</a>
-<a href='#depoimentos'>Depoimentos</a>
-<a href='#bonus'>Bônus</a>
-<a href='#faq'>Dúvidas</a>
-<a href='#captura' class='nav-cta'>Quero entrar</a>
+<section class='sec'><div class='sec-head'><div><h2>Compre por categoria</h2><p>Encontre rápido o que você procura</p></div></div><div class='cats' id='catGrid'></div></section>
+<section class='sec' id='ofertas'><div class='sec-head'><div><h2>⭐ Produtos em destaque</h2><p>Selecionados pela nossa equipe</p></div></div><div id='featuredState'></div><div class='grid' id='featuredGrid'></div></section>
+<section class='sec'><div class='sec-head'><div><h2>🔥 Mais vendidos</h2><p>Os queridinhos dos clientes</p></div></div><div id='bestState'></div><div class='grid' id='bestGrid'></div></section>
+<section class='sec' id='catalogo'><div class='sec-head'><div><h2>Todos os produtos</h2><p id='resultInfo'>Carregando catálogo...</p></div></div>
+<div class='toolbar'>
+<select id='fCat' aria-label='Filtrar por categoria'><option value=''>Todas as categorias</option></select>
+<select id='fSort' aria-label='Ordenar'><option value='rel'>Mais relevantes</option><option value='asc'>Menor preço</option><option value='desc'>Maior preço</option><option value='rating'>Melhor avaliados</option></select>
+<input id='fQ' placeholder='Filtrar pelo nome...' style='flex:1;min-width:160px'/>
 </div>
-</div>
-</nav>
-<section class='sec' id='paraquem'><div class='container'><div class='grid g2'>
-<div class='card'><h2 class='title'>ALERTA: Pare tudo se você…</h2>
-<ul class='check'><li>Quer estruturar ativos digitais e automações com IA.</li><li>Quer reduzir trabalho manual e aumentar eficiência.</li><li>Busca processos escaláveis para serviços digitais.</li><li>Quer liderar o uso de ferramentas inteligentes no seu mercado.</li></ul>
-<p style='margin-top:14px;font-weight:800'>Se você se identificou com 2 ou mais, este método é para você.</p></div>
-<div class='tech' role='img' aria-label='Tecnologia e automação'></div>
-</div></div></section>
-<section class='sec alt' id='prova'><div class='container'><div class='grid g2'>
-<div class='tech' role='img' aria-label='Resultados de automação'></div>
-<div class='card'><h2 class='title'>Resultados típicos de automação</h2>
-<p class='muted'>Exemplos educacionais de ganhos de eficiência: mais velocidade de produção, menos tarefas repetitivas e melhor previsibilidade operacional. (Demonstrações simuladas para fins educacionais.)</p>
-<ul class='check'><li>Fluxos automatizados reduzem retrabalho.</li><li>Conteúdo gerado com apoio de IA em minutos.</li><li>Sistemas que operam 24/7 sem pausa.</li></ul></div>
-</div></div></section>
-<section class='sec' id='segredo'><div class='container'><div class='card'>
-<h2 class='title'>Os 4 Pilares da Automação</h2>
-<p class='muted'>O passo a passo completo, do zero ao sistema rodando.</p>
-<div class='table-wrap'><table>
-<thead><tr><th>Módulo</th><th>Nome</th><th>O que você constrói</th></tr></thead>
-<tbody>
-<tr><td><strong>Módulo 1</strong></td><td>Mentalidade de Sistemas com IA</td><td>Uso prático de assistentes como copiloto de tarefas.</td></tr>
-<tr><td><strong>Módulo 2</strong></td><td>Engenharia de Prompts Profissionais</td><td>Comandos estruturados para criação eficiente de ativos.</td></tr>
-<tr><td><strong>Módulo 3</strong></td><td>Blueprint de Automação</td><td>Fluxos que conectam IA, páginas e entregas digitais.</td></tr>
-<tr><td><strong>Módulo 4</strong></td><td>Tráfego Assistido por IA</td><td>Otimização de campanhas com apoio de dados.</td></tr>
-</tbody>
-</table></div>
-</div></div></section>
-<section class='sec alt' id='como-funciona'><div class='container'>
-<h2 class='title center' style='text-align:center;margin-bottom:20px'>Como funciona em 3 passos</h2>
-<div class='grid g3'>
-<div class='card card-highlight'><div class='step-num'>01</div><h3>Cadastre-se</h3><p class='muted'>Preencha nome, WhatsApp e e-mail no formulário. Levamos você direto ao WhatsApp oficial com sua vaga reservada.</p></div>
-<div class='card card-highlight'><div class='step-num'>02</div><h3>Receba o acesso</h3><p class='muted'>Confirme sua inscrição e receba os 4 módulos + 3 bônus + grupo exclusivo de alunos.</p></div>
-<div class='card card-highlight'><div class='step-num'>03</div><h3>Automatize e escale</h3><p class='muted'>Aplique o blueprint, participe das lives no Meet e rode seu sistema 24/7.</p></div>
-</div></div></section>
-<section class='sec' id='depoimentos'><div class='container'>
-<h2 class='title' style='text-align:center'>Quem aplicou, recomenda</h2>
-<p class='muted' style='text-align:center;margin-bottom:20px'>Depoimentos de alunos sobre organização, velocidade e clareza do método.</p>
-<div class='grid g3'>
-<div class='card'><div style='display:flex;gap:12px;align-items:center'><div class='avatar'>R</div><div><strong>Rafael S.</strong><br/><span class='muted' style='font-size:.85rem'>Autônomo • SP</span></div></div><div class='stars'>★★★★★</div><p class='muted'>Eu gastava 3h por dia em tarefas repetitivas. Com o Módulo 3 montei meu primeiro fluxo em um fim de semana.</p></div>
-<div class='card'><div style='display:flex;gap:12px;align-items:center'><div class='avatar'>C</div><div><strong>Camila O.</strong><br/><span class='muted' style='font-size:.85rem'>Social media • RJ</span></div></div><div class='stars'>★★★★★</div><p class='muted'>O cofre de prompts vale o preço sozinho. Produzo conteúdo da semana em 1 tarde.</p></div>
-<div class='card'><div style='display:flex;gap:12px;align-items:center'><div class='avatar'>D</div><div><strong>Diego M.</strong><br/><span class='muted' style='font-size:.85rem'>Prestador de serviços • MG</span></div></div><div class='stars'>★★★★★</div><p class='muted'>As lives tiram todas as dúvidas. Saí do zero e organizei minha oferta e entrega.</p></div>
-</div></div></section>
-<section class='sec alt' id='bonus'><div class='container'>
-<div class='grid g3'>
-<div class='card'><h3>🎁 Bônus 1</h3><p class='muted'>Cofre de prompts profissionais — biblioteca prática pronta para copiar e adaptar.</p></div>
-<div class='card'><h3>🎁 Bônus 2</h3><p class='muted'>Aula especial sobre criação de serviços com IA — como empacotar e precificar.</p></div>
-<div class='card'><h3>🎁 Bônus 3</h3><p class='muted'>Grupo exclusivo de alunos — networking, suporte e atualizações.</p></div>
-</div>
-<div class='card' style='margin-top:18px'><h3>🛡️ Garantia incondicional de 7 dias</h3><p class='muted'>Conforme o Código de Defesa do Consumidor. Se não gostar, solicite reembolso pela mesma forma de pagamento, sem burocracia.</p></div>
-</div></section>
-<section class='sec' id='comprar'><div class='container'><div class='grid g2'>
-<div class='card card-highlight'>
-<h2 class='title'>Preço especial de lançamento</h2>
-<p class='price-old'>De R$ 677,89</p>
-<p class='price-new'>R$ 139,89</p>
-<p class='price-inst'>ou 12x de R$ 13,70 no cartão*</p>
-<p class='scarcity'>🔥 87% das vagas de lançamento já preenchidas</p>
-<div class='progress'><i></i></div>
-<div class='selos'><span class='selo'>🔒 Compra segura</span><span class='selo'>⚡ Acesso imediato</span><span class='selo'>🛡️ 7 dias de garantia</span></div>
-<div class='btn-row'>
-<button class='cta' onclick='comprar()'>FALAR NO WHATSAPP</button>
-<a class='cta-ghost' href='#captura'>Reservar minha vaga</a>
-</div>
-<p class='micro'>*Parcelamento simulado para referência. Confirmação do valor final no atendimento via WhatsApp.</p>
-</div>
-<div class='tech' role='img' aria-label='Oferta especial'></div>
-</div></div></section>
-<section class='sec alt' id='captura'><div class='container'><div class='grid g2'>
-<div class='card card-highlight'>
-<h2 class='title'>Reserve sua vaga agora</h2>
-<p class='muted'>Preencha e fale direto no WhatsApp oficial. Sem spam — só o link da oferta.</p>
-<form id='leadForm' class='form' novalidate>
-<label for='nome'>Nome completo</label>
-<input id='nome' name='nome' type='text' placeholder='Seu nome' autocomplete='name' required />
-<label for='whatsapp'>WhatsApp (com DDD)</label>
-<input id='whatsapp' name='whatsapp' type='tel' inputmode='tel' placeholder='(11) 99999-9999' autocomplete='tel' required />
-<label for='email'>Melhor e-mail</label>
-<input id='email' name='email' type='email' placeholder='voce@email.com' autocomplete='email' required />
-<label class='lgpd' for='lgpd'><input id='lgpd' type='checkbox' required /><span>Aceito ser contatado(a) sobre a Mentoria Money Makers I.A via WhatsApp/e-mail (LGPD — Lei 13.709/2018). Não compartilhamos seus dados.</span></label>
-<div class='form-error' id='formError' role='alert' aria-live='polite'></div>
-<div style='margin-top:14px'><button class='cta' id='submitBtn' type='submit' style='width:100%'>QUERO MINHA VAGA POR R$ 139,89</button></div>
-<div class='form-ok' id='formOk'>✅ Cadastro recebido! Abrindo seu WhatsApp…</div>
-<div class='form-err' id='formFail'>⚠️ Não foi possível salvar agora, mas você pode continuar pelo WhatsApp.</div>
-<p class='micro'>Ao enviar, você concorda em ser contatado sobre a mentoria (LGPD — Lei 13.709/2018).</p>
-</form>
-</div>
-<div class='card'>
-<h3>O que você recebe hoje</h3>
-<ul class='check'><li>4 módulos completos da mentoria</li><li>3 bônus exclusivos</li><li>Aulas ao vivo no Google Meet</li><li>Grupo exclusivo de alunos</li><li>Garantia de 7 dias</li></ul>
-<div class='tech' style='margin-top:18px;min-height:150px'></div>
-</div>
-</div></div></section>
-<section class='sec' id='faq'><div class='container'><div class='card'>
-<h2 class='title'>Perguntas frequentes</h2>
-<div class='faq-item'><button type='button' class='faq-q' aria-expanded='false'>Preciso saber programar? <span>+</span></button><div class='faq-a'><p>Não. O método usa ferramentas no-code e prompts guiados, passo a passo.</p></div></div>
-<div class='faq-item'><button type='button' class='faq-q' aria-expanded='false'>Como recebo o acesso? <span>+</span></button><div class='faq-a'><p>Após confirmar no WhatsApp oficial, você recebe o link da área de alunos + convite do grupo e das lives.</p></div></div>
-<div class='faq-item'><button type='button' class='faq-q' aria-expanded='false'>E se eu não gostar? <span>+</span></button><div class='faq-a'><p>Você tem 7 dias de garantia conforme o CDC, com reembolso pela mesma forma de pagamento.</p></div></div>
-<div class='faq-item'><button type='button' class='faq-q' aria-expanded='false'>As aulas são ao vivo? <span>+</span></button><div class='faq-a'><p>Sim, há aulas ao vivo via Google Meet + gravações disponíveis para rever quando quiser.</p></div></div>
-<div class='faq-item'><button type='button' class='faq-q' aria-expanded='false'>Por quanto tempo tenho acesso? <span>+</span></button><div class='faq-a'><p>Acesso de 12 meses, incluindo atualizações do período e bônus desta turma.</p></div></div>
-</div></div></section>
-<section class='sec alt' id='live'><div class='container'><div class='card' style='text-align:center'>
-<h2 class='title'>Aulas ao vivo</h2>
-<p class='muted'>Clique para abrir no Google Meet. As lives acontecem em datas avisadas no grupo de alunos.</p>
-<div style='margin-top:16px'><button class='cta' onclick='abrirLive()'>ENTRAR NA LIVE</button></div>
-</div></div></section>
-<footer>
-<p><strong style='color:#fff'>© 2025 Money Makers I.A — Mentoria Exclusiva</strong></p>
-<p style='margin-top:8px'>Atendimento: <a href='https://wa.me/5511989353418' target='_blank' rel='noopener'>(11) 98935-3418</a> • E-mail: <a href='mailto:contato@moneymakers-ia.com'>contato@moneymakers-ia.com</a></p>
-<p style='margin-top:8px'>CNPJ: 00.000.000/0001-00 • Este site não é afiliado ao Google, Meta ou WhatsApp.</p>
-<p style='margin-top:8px;max-width:760px;margin-left:auto;margin-right:auto'>Resultados variam por dedicação e contexto. Conteúdo educacional, sem promessa de ganhos. Seus dados são usados apenas para contato sobre a mentoria (LGPD).</p>
-</footer>
-<div class='fixed'><button class='cta' onclick="document.getElementById('captura').scrollIntoView({behavior:'smooth'})">Quero entrar</button></div>
-<script>
-function comprar(){window.open('https://wa.me/5511989353418?text='+encodeURIComponent('Olá! Quero entrar na Mentoria Money Makers I.A por R$ 139,89 🔥'),'_blank')}
-function abrirLive(){window.open('https://meet.google.com/','_blank')}
-(function(){
-var KEY='mm_offer_end';var end=null;
-try{var s=localStorage.getItem(KEY);if(s)end=new Date(parseInt(s,10))}catch(e){}
-if(!end||isNaN(end.getTime())||end.getTime()<=Date.now()){end=new Date(Date.now()+72*60*60*1000);try{localStorage.setItem(KEY,String(end.getTime()))}catch(e){}}
-function tick(){var t=end-new Date();if(t<0)t=0;var d=Math.floor(t/86400000);var h=Math.floor((t%86400000)/3600000);var m=Math.floor((t%3600000)/60000);var s2=Math.floor((t%60000)/1000);
-document.getElementById('d').textContent=String(d).padStart(2,'0');document.getElementById('h').textContent=String(h).padStart(2,'0');document.getElementById('m').textContent=String(m).padStart(2,'0');document.getElementById('s').textContent=String(s2).padStart(2,'0')}
-tick();setInterval(tick,1000);
-document.querySelectorAll('.faq-q').forEach(function(b){b.addEventListener('click',function(){var it=b.closest('.faq-item');var was=it.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(function(o){o.classList.remove('open');o.querySelector('.faq-q').setAttribute('aria-expanded','false')});if(!was){it.classList.add('open');b.setAttribute('aria-expanded','true')}})});
-var nl=document.getElementById('navLinks');if(nl){nl.addEventListener('click',function(e){if(e.target.tagName==='A'&&window.innerWidth<=820)e.currentTarget.classList.remove('open')})}
-})();
-</script>
+<div id='allState'></div><div class='grid' id='allGrid'></div>
+</section>
+</main>
+<footer class='site'><div class='foot-in'>
+<div><h4>🛍️ LuminaShop</h4><p style='font-size:.9rem;max-width:320px'>Loja completa, rápida e segura. Qualidade garantida, troca em 7 dias e suporte humano no Telegram.</p><p style='margin-top:10px'>✈️ <a href='https://t.me/luminashop_suporte' target='_blank' rel='noopener' style='display:inline;color:#7dd3fc'>Falar no Telegram</a></p></div>
+<div><h4>Institucional</h4><a href='#/'>Início</a><a href='#catalogo'>Catálogo</a><a href='#ofertas'>Ofertas</a><a href='admin.html'>Área do lojista</a></div>
+<div><h4>Ajuda</h4><a href='https://t.me/luminashop_suporte' target='_blank' rel='noopener'>Suporte Telegram</a><a href='#'>Trocas e devoluções</a><a href='#'>Frete e prazos</a></div>
+<div><h4>Pagamento</h4><a href='#'>Pix com 5% OFF</a><a href='#'>Cartão em até 12x</a><a href='#'>Boleto à vista</a></div>
+</div><div class='copy'>© 2025 LuminaShop • CNPJ 00.000.000/0001-00 • Preços e estoque sujeitos a alteração</div></footer>
+<button class='float-tele' onclick="window.open('https://t.me/luminashop_suporte','_blank')">✈️ Suporte Telegram</button>
+<div class='drawer-bg' id='drawerBg'></div>
+<aside class='drawer' id='drawer' aria-label='Carrinho'>
+<header><b>🛒 Seu carrinho (<span id='drawerN'>0</span>)</b><button class='hbtn' id='closeCart'>✕</button></header>
+<div class='items' id='cartItems'></div>
+<footer><div style='display:flex;justify-content:space-between;margin-bottom:10px'><span>Subtotal</span><b id='cartTotal'>R$ 0,00</b></div><button class='btn btn-brand' id='goCheckout' style='width:100%'>Finalizar compra →</button><button class='btn btn-ghost' id='keepBuying' style='width:100%;margin-top:8px'>Continuar comprando</button></footer>
+</aside>
+<div class='modal-bg' id='pModalBg'><div class='modal'><div class='modal-in'><div class='mgal'><img class='main' id='pmImg' alt='Produto'/><div class='thumbs' id='pmThumbs'></div></div><div class='minfo'><p class='pcat' id='pmCat'></p><h2 id='pmName'></h2><div class='stars' id='pmStars'></div><div class='price-row'><span class='price' id='pmPrice'></span><span class='old' id='pmOld'></span></div><p style='color:var(--muted);font-size:.92rem' id='pmDesc'></p><div class='field'><label for='pmQty'>Quantidade</label><input id='pmQty' type='number' min='1' value='1'/></div><div class='field'><label for='pmCep'>Calcular frete (CEP)</label><div style='display:flex;gap:8px'><input id='pmCep' placeholder='00000-000' inputmode='numeric'/><button class='btn btn-dark' id='pmFrete'>OK</button></div><p id='pmFreteOut' style='font-size:.86rem;color:var(--muted);margin-top:6px'></p></div><div style='display:flex;gap:8px;flex-wrap:wrap;margin-top:12px'><button class='btn btn-brand' id='pmAdd' style='flex:1'>Adicionar ao carrinho</button><button class='btn btn-ghost' id='pmClose'>Fechar</button></div></div></div></div></div>
+<div class='modal-bg' id='ckModalBg'><div class='modal' style='max-width:640px'><div style='padding:22px'>
+<h2>Finalizar compra</h2><div class='steps'><div class='step on' id='st1'>1 • Dados</div><div class='step' id='st2'>2 • Entrega</div><div class='step' id='st3'>3 • Pagamento</div></div>
+<div id='ck1'><div class='field'><label>Nome completo</label><input id='cName' placeholder='Seu nome'/></div><div style='display:grid;grid-template-columns:1fr 1fr;gap:10px'><div class='field'><label>E-mail</label><input id='cEmail' placeholder='voce@email.com'/></div><div class='field'><label>Telefone / WhatsApp</label><input id='cPhone' placeholder='(11) 99999-9999'/></div></div><button class='btn btn-dark' id='to2' style='width:100%'>Continuar para entrega →</button></div>
+<div id='ck2' hidden><div style='display:grid;grid-template-columns:1fr 2fr;gap:10px'><div class='field'><label>CEP</label><input id='cCep' placeholder='00000-000'/></div><div class='field'><label>Endereço + número</label><input id='cAddr' placeholder='Rua, Av...'/></div></div><div style='display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px'><div class='field'><label>Cidade</label><input id='cCity' placeholder='São Paulo'/></div><div class='field'><label>UF</label><input id='cUf' placeholder='SP'/></div><div class='field'><label>Complemento</label><input id='cComp' placeholder='Apto, bloco...'/></div></div><div style='display:flex;gap:8px'><button class='btn btn-ghost' id='back1'>← Voltar</button><button class='btn btn-dark' id='to3' style='flex:1'>Continuar para pagamento →</button></div></div>
+<div id='ck3' hidden><div class='pay'><label><input type='radio' name='pay' value='pix' checked/> 💠 Pix — 5% OFF na hora</label><label><input type='radio' name='pay' value='cartao'/> 💳 Cartão de crédito em até 12x</label><label><input type='radio' name='pay' value='boleto'/> 🧾 Boleto à vista</label></div><div id='cardBox' hidden><div style='display:grid;grid-template-columns:2fr 1fr;gap:10px;margin-top:10px'><div class='field'><label>Número do cartão</label><input id='ccNum' placeholder='0000 0000 0000 0000'/></div><div class='field'><label>Validade</label><input id='ccExp' placeholder='MM/AA'/></div></div></div><div style='background:#f8fafc;border:1px solid var(--line);border-radius:12px;padding:12px;margin:12px 0;font-size:.9rem' id='ckSummary'></div><div style='display:flex;gap:8px'><button class='btn btn-ghost' id='back2'>← Voltar</button><button class='btn btn-brand' id='placeOrder' style='flex:1'>Confirmar pedido ✅</button></div><button class='btn btn-ghost' id='ckClose' style='width:100%;margin-top:8px'>Cancelar</button></div>
+<div id='ck4' hidden><div class='success'><div style='font-size:3rem'>🎉</div><h2>Pedido confirmado!</h2><p style='color:var(--muted)'>Recebemos seu pedido e enviamos a confirmação por e-mail.</p><div class='code' id='orderCode'>—</div><p id='orderInfo' style='font-size:.9rem;color:var(--muted)'></p><button class='btn btn-dark' id='okOrder' style='width:100%;margin-top:10px'>Voltar para a loja</button></div></div>
+</div></div></div>
+<div class='toast' id='toast'></div>
 <script type='module'>
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
-const SUPABASE_URL='https://behxrckorrgbxmhjvxtb.supabase.co';
-const SUPABASE_KEY='sb_publishable_85rBSrDBLsx0KmXEvOBWIw_uACQ-8ly';
-const supabase=createClient(SUPABASE_URL,SUPABASE_KEY);
-const form=document.getElementById('leadForm');const err=document.getElementById('formError');const ok=document.getElementById('formOk');const fail=document.getElementById('formFail');const btn=document.getElementById('submitBtn');const wpp=document.getElementById('whatsapp');const lgpd=document.getElementById('lgpd');
-function mask(v){const d=v.replace(/\D/g,'').slice(0,11);if(d.length<=2)return d.length?'('+d:'';if(d.length<=6)return '('+d.slice(0,2)+') '+d.slice(2);if(d.length<=10)return '('+d.slice(0,2)+') '+d.slice(2,6)+'-'+d.slice(6);return '('+d.slice(0,2)+') '+d.slice(2,7)+'-'+d.slice(7)}
-wpp.addEventListener('input',()=>{wpp.value=mask(wpp.value)});
-form.addEventListener('submit',async(e)=>{e.preventDefault();err.textContent='';ok.style.display='none';fail.style.display='none';
-const nome=document.getElementById('nome').value.trim();const raw=wpp.value.trim();const email=document.getElementById('email').value.trim().toLowerCase();const digits=raw.replace(/\D/g,'');
-if(nome.length<2){err.textContent='Informe seu nome completo.';return}
-if(digits.length<10||digits.length>11){err.textContent='Informe um WhatsApp válido com DDD. Ex: (11) 99999-9999';return}
-if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){err.textContent='Informe um e-mail válido.';return}
-if(!lgpd.checked){err.textContent='Para continuar, aceite o contato sobre a mentoria (LGPD).';return}
-btn.disabled=true;const lbl=btn.textContent;btn.textContent='ENVIANDO...';
-let savedOk=true;let saveMsg='';
-try{const base={name:nome,email:email,phone:digits,source:'landing_mm_ia'};const withW={...base,whatsapp:raw};let res=await supabase.from('mentorship_leads').insert([withW]).select('id');
-if(res.error&&/whatsapp|column|schema|PGRST/i.test(res.error.message||'')){res=await supabase.from('mentorship_leads').insert([base]).select('id')}
-if(res.error)throw res.error;
-}catch(e2){console.warn(e2);savedOk=false;saveMsg=(e2&&e2.message)?e2.message:'erro desconhecido'}
-if(savedOk){ok.style.display='block'}else{fail.style.display='block';fail.textContent='⚠️ Não foi possível salvar agora ('+saveMsg+'), mas você pode continuar pelo WhatsApp.'}
-const msg='Olá! Sou '+nome+' ('+email+') — '+raw+'. Quero entrar na Mentoria Money Makers I.A por R$ 139,89 🔥';
-setTimeout(()=>{window.open('https://wa.me/5511989353418?text='+encodeURIComponent(msg),'_blank');btn.disabled=false;btn.textContent=lbl;if(savedOk)form.reset()},900)});
+const URL='https://sqpevkuahatlcjhcseqv.supabase.co';
+const KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNxcGV2a3VhaGF0bGNzZXF2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjUyNDQyNTYsImV4cCI6MjA4MDgyMDI1Nn0.QXZR-IbpjL_RqCwTYG8IJupML6zGtB6XKFbAovkR3x0';
+const supabase=createClient(URL,KEY);
+const BRL=v=>'R$ '+(Number(v)||0).toFixed(2).replace('.',',');
+const $=id=>document.getElementById(id);
+const FALLBACK_CATS=[{id:'eletronicos',name:'Eletrônicos',slug:'eletronicos',icon:'🔌'},{id:'moda',name:'Moda',slug:'moda',icon:'👕'},{id:'casa',name:'Casa',slug:'casa',icon:'🏠'},{id:'esporte',name:'Esporte',slug:'esporte',icon:'🏃'},{id:'beleza',name:'Beleza',slug:'beleza',icon:'💄'}];
+const U='?q=80&w=800&auto=format&fit=crop';
+const FALLBACK=[{id:'p1',name:'Fone Bluetooth Pro',category_id:'eletronicos',category:'Eletrônicos',price:199.9,compare_at_price:299.9,rating:4.8,sold:1250,featured:true,best_seller:true,active:true,stock:30,description:'Cancelamento de ruído, 36h de bateria e microfone HD.',images:['https://images.unsplash.com/photo-1505740420928-5e560c06d30e'+U]},{id:'p2',name:'Smartwatch Fit S',category_id:'eletronicos',price:349.9,compare_at_price:499.9,rating:4.7,sold:980,featured:true,best_seller:true,stock:22,description:'GPS, batimento e 10 dias de bateria.',images:['https://images.unsplash.com/photo-1523275335684-37898b6baf30'+U]},{id:'p3',name:'Camiseta Essencial Premium',category_id:'moda',price:79.9,compare_at_price:119.9,rating:4.6,sold:2100,featured:true,best_seller:true,stock:100,description:'Algodão pima, corte moderno.',images:['https://images.unsplash.com/photo-1521572163474-6864f9cf17ab'+U]},{id:'p4',name:'Tênis Runner Air',category_id:'esporte',price:299.9,compare_at_price:429.9,rating:4.9,sold:1750,featured:true,best_seller:true,stock:40,description:'Amortecimento responsivo para corrida.',images:['https://images.unsplash.com/photo-1542291026-7eec264c27ff'+U]},{id:'p5',name:'Luminária LED Moderna',category_id:'casa',price:129.9,compare_at_price:189.9,rating:4.5,sold:640,featured:true,best_seller:false,stock:55,description:'3 temperaturas de cor, toque dimmer.',images:['https://images.unsplash.com/photo-1507473885765-e6ed057f782c'+U]},{id:'p6',name:'Kit Skincare Facial',category_id:'beleza',price:149.9,compare_at_price:219.9,rating:4.7,sold:890,featured:false,best_seller:true,stock:70,description:'Rotina completa para todos os tipos de pele.',images:['https://images.unsplash.com/photo-1556228720-195a672e8a03'+U]},{id:'p7',name:'Mochila Urban 25L',category_id:'moda',price:189.9,compare_at_price:259.9,rating:4.6,sold:540,featured:false,best_seller:false,stock:45,description:'Impermeável, compartimento para notebook.',images:['https://images.unsplash.com/photo-1553062407-98eeb64c6a62'+U]},{id:'p8',name:'Air Fryer 5L Digital',category_id:'casa',price:419.9,compare_at_price:599.9,rating:4.8,sold:1320,featured:true,best_seller:true,stock:25,description:'8 modos, antiaderente e timer.',images:['https://images.unsplash.com/photo-1626074353765-517a681e40be'+U]},{id:'p9',name:'Halter Ajustável 24kg',category_id:'esporte',price:499.9,compare_at_price:699.9,rating:4.7,sold:320,featured:false,best_seller:false,stock:18,description:'Ajuste rápido para treino em casa.',images:['https://images.unsplash.com/photo-1517836357463-d25dfeac3438'+U]},{id:'p10',name:'Perfume Essence 100ml',category_id:'beleza',price:239.9,compare_at_price:329.9,rating:4.9,sold:760,featured:true,best_seller:false,stock:60,description:'Fragrância marcante, fixação 12h.',images:['https://images.unsplash.com/photo-1541643600914-78b084683601'+U]},{id:'p11',name:'Teclado Mecânico RGB',category_id:'eletronicos',price:279.9,compare_at_price:379.9,rating:4.6,sold:410,featured:false,best_seller:false,stock:35,description:'Switch blue, ABNT2.',images:['https://images.unsplash.com/photo-1587829741301-dc798b83add3'+U]},{id:'p12',name:'Jaqueta Jeans Classic',category_id:'moda',price:229.9,compare_at_price:319.9,rating:4.5,sold:380,featured:false,best_seller:false,stock:50,description:'Jeans premium, modelagem atemporal.',images:['https://images.unsplash.com/photo-1551537482-f2075a1d41f2'+U]}];
+let cats=FALLBACK_CATS, products=FALLBACK, filter={q:'',cat:'',sort:'rel'};
+let cart={}; try{cart=JSON.parse(localStorage.getItem('lumina_cart_v1')||'{}')}catch(e){cart={}}
+let current=null;
+function toast(m){const t=$('toast');t.textContent=m;t.classList.add('show');clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('show'),2200)}
+function saveCart(){localStorage.setItem('lumina_cart_v1',JSON.stringify(cart));renderCart()}
+function cartCount(){return Object.values(cart).reduce((a,b)=>a+(b.qty||0),0)}
+function cartSubtotal(){return Object.values(cart).reduce((a,b)=>a+(b.qty*(b.price||0)),0)}
+function prodById(id){return products.find(p=>String(p.id)===String(id))}
+function pImg(p){if(Array.isArray(p.images)&&p.images[0])return p.images[0];if(typeof p.images==='string'&&p.images)return p.images.split(',')[0];if(p.image_url)return p.image_url;if(p.image)return p.image;return 'https://images.unsplash.com/photo-1441986300917-64674bd600d8'+U}
+function pImgs(p){if(Array.isArray(p.images)&&p.images.length)return p.images;if(typeof p.images==='string'&&p.images.length)return p.images.split(',').map(s=>s.trim()).filter(Boolean);return [pImg(p)]}
+function pCat(p){const c=cats.find(c=>String(c.id)===String(p.category_id)||c.slug===p.category_id||c.name===p.category);return c?c.name:(p.category||'Geral')}
+function pPrice(p){return Number(p.price||0)}
+function pOld(p){return Number(p.compare_at_price||p.compare_price||0)}
+function stars(r){r=Number(r||4.5);const f=Math.round(r);return '★'.repeat(f)+'☆'.repeat(5-f)+' '+r.toFixed(1)}
+async function load(){
+try{const rc=await supabase.from('categories').select('*');if(!rc.error&&rc.data&&rc.data.length){cats=rc.data.map(c=>({id:c.id,name:c.name,slug:c.slug||c.id,icon:c.icon||'🏷️'}))}}catch(e){}
+try{const rp=await supabase.from('products').select('*').eq('active',true).limit(100);
+if(!rp.error&&rp.data&&rp.data.length){products=rp.data}
+else{const rp2=await supabase.from('products').select('*').limit(100);if(!rp2.error&&rp2.data&&rp2.data.length)products=rp2.data}
+}catch(e){}
+renderCats();renderAll();}
+function renderCats(){
+const nav=$('catNav');nav.innerHTML='';
+const all=document.createElement('button');all.className='chip'+(!filter.cat?' active':'');all.textContent='🛍️ Todos';all.onclick=()=>{filter.cat='';renderCats();renderAll()};nav.appendChild(all);
+cats.forEach(c=>{const b=document.createElement('button');b.className='chip'+(String(filter.cat)===String(c.id)||filter.cat===c.slug?' active':'');b.textContent=(c.icon||'🏷️')+' '+c.name;b.onclick=()=>{filter.cat=c.id;$('fCat').value=c.id;renderCats();renderAll();document.getElementById('catalogo').scrollIntoView({behavior:'smooth'})};nav.appendChild(b)});
+const sel=$('fCat');sel.innerHTML='<option value="">Todas as categorias</option>'+cats.map(c=>'<option value="'+c.id+'">'+c.name+'</option>').join('');sel.value=filter.cat||'';
+const g=$('catGrid');g.innerHTML=cats.map(c=>{const n=products.filter(p=>String(p.category_id)===String(c.id)||p.category===c.name).length;return "<div class='cat' data-id='"+c.id+"'><i>"+(c.icon||'🏷️')+"</i><b>"+c.name+"</b><span>"+n+" produtos</span></div>"}).join('');
+g.querySelectorAll('.cat').forEach(el=>el.onclick=()=>{filter.cat=el.dataset.id;$('fCat').value=filter.cat;renderCats();renderAll();document.getElementById('catalogo').scrollIntoView({behavior:'smooth'})});
+document.querySelectorAll('[data-cat]').forEach(b=>b.onclick=()=>{const slug=b.getAttribute('data-cat');const f=cats.find(c=>c.slug===slug);filter.cat=f?f.id:slug;$('fCat').value=filter.cat;renderCats();renderAll();document.getElementById('catalogo').scrollIntoView({behavior:'smooth'})});}
+function cardHTML(p){
+const img=pImg(p),old=pOld(p),pr=pPrice(p);let off='';if(old>pr){off=Math.round((1-pr/old)*100)}
+return "<div class='card'><div class='pimg' data-open='"+p.id+"'>"+(off?"<span class='tag'>-"+off+"%</span>":'')+((p.best_seller||p.sold>800)?"<span class='tag best' style='left:auto;right:10px'>TOP</span>":'')+"<img loading='lazy' src='"+img+"' alt='"+String(p.name).replace(/'/g,'')+"'/></div><div class='pbody'><span class='pcat'>"+pCat(p)+"</span><div class='pname' data-open='"+p.id+"'>"+p.name+"</div><div class='stars'>"+stars(p.rating)+"</div><div class='price-row'><span class='price'>"+BRL(pr)+"</span>"+(old>pr?"<span class='old'>"+BRL(old)+"</span>":'')+"</div><button class='btn btn-dark add' data-add='"+p.id+"'>Adicionar 🛒</button></div></div>"}
+function bindCards(scope){
+scope.querySelectorAll('[data-add]').forEach(b=>b.onclick=e=>{e.stopPropagation();addToCart(b.getAttribute('data-add'),1)});
+scope.querySelectorAll('[data-open]').forEach(el=>el.onclick=()=>openProduct(el.getAttribute('data-open')))}
+function filtered(){
+let list=[...products];
+if(filter.cat)list=list.filter(p=>String(p.category_id)===String(filter.cat)||p.category===String(filter.cat));
+if(filter.q){const q=filter.q.toLowerCase();list=list.filter(p=>(p.name||'').toLowerCase().includes(q)||((p.description||'').toLowerCase().includes(q)))}
+if(filter.sort==='asc')list.sort((a,b)=>pPrice(a)-pPrice(b));
+if(filter.sort==='desc')list.sort((a,b)=>pPrice(b)-pPrice(a));
+if(filter.sort==='rating')list.sort((a,b)=>Number(b.rating||0)-Number(a.rating||0));
+return list}
+function renderAll(){
+const feat=products.filter(p=>p.featured);const best=products.filter(p=>p.best_seller||Number(p.sold||0)>700);
+const fg=$('featuredGrid');fg.innerHTML=(feat.length?feat:products.slice(0,4)).map(cardHTML).join('');bindCards(fg);
+$('featuredState').innerHTML='';
+const bg=$('bestGrid');bg.innerHTML=(best.length?best:products.slice(0,4)).map(cardHTML).join('');bindCards(bg);
+$('bestState').innerHTML='';
+const list=filtered();const ag=$('allGrid');
+if(!list.length){ag.innerHTML='';$('allState').innerHTML="<div class='state'>😕 Nenhum produto encontrado.<br/>Tente outra busca ou categoria.</div>"}
+else{$('allState').innerHTML='';ag.innerHTML=list.map(cardHTML).join('');bindCards(ag)}
+$('resultInfo').textContent=list.length+' produto(s) • '+cats.length+' categorias';}
+function addToCart(id,qty){const p=prodById(id);if(!p)return;const q=Math.max(1,Number(qty)||1);if(cart[id])cart[id].qty+=q;else cart[id]={id:p.id,name:p.name,price:pPrice(p),img:pImg(p),qty:q};saveCart();toast('✅ '+p.name+' no carrinho');openDrawer()}
+function renderCart(){
+const n=cartCount();$('cartCount').textContent=n;$('drawerN').textContent=n;
+const box=$('cartItems');const arr=Object.values(cart);
+if(!arr.length){box.innerHTML="<div class='state'>🛒 Carrinho vazio.<br/>Que tal ver as ofertas?</div>"}
+else{box.innerHTML=arr.map(i=>"<div class='item'><img src='"+i.img+"'/><div style='flex:1'><b style='font-size:.88rem'>"+i.name+"</b><div style='color:var(--muted);font-size:.85rem'>"+BRL(i.price)+" un.</div><div class='qty'><button data-dec='"+i.id+"'>−</button><b>"+i.qty+"</b><button data-inc='"+i.id+"'>+</button><button data-rm='"+i.id+"' style='margin-left:auto;border:none;background:none;cursor:pointer'>🗑️</button></div></div><div style='font-weight:900'>"+BRL(i.price*i.qty)+"</div></div>").join('')}
+$('cartTotal').textContent=BRL(cartSubtotal());
+box.querySelectorAll('[data-inc]').forEach(b=>b.onclick=()=>{cart[b.getAttribute('data-inc')].qty++;saveCart()});
+box.querySelectorAll('[data-dec]').forEach(b=>b.onclick=()=>{const k=b.getAttribute('data-dec');cart[k].qty--;if(cart[k].qty<=0)delete cart[k];saveCart()});
+box.querySelectorAll('[data-rm]').forEach(b=>b.onclick=()=>{delete cart[b.getAttribute('data-rm')];saveCart()});}
+function openDrawer(){$('drawer').classList.add('show');$('drawerBg').classList.add('show')}
+function closeDrawer(){$('drawer').classList.remove('show');$('drawerBg').classList.remove('show')}
+function openProduct(id){const p=prodById(id);if(!p)return;current=p;
+$('pmCat').textContent=pCat(p).toUpperCase();$('pmName').textContent=p.name;$('pmStars').textContent=stars(p.rating)+' • '+(p.sold||Math.round(Math.random()*500+100))+' vendidos';$('pmPrice').textContent=BRL(pPrice(p));$('pmOld').textContent=pOld(p)>pPrice(p)?BRL(pOld(p)):'';$('pmDesc').textContent=p.description||'Produto original com garantia e nota fiscal.';$('pmQty').value=1;
+const imgs=pImgs(p);$('pmImg').src=imgs[0];const th=$('pmThumbs');th.innerHTML=imgs.map((s,i)=>"<img src='"+s+"' class='"+(i===0?'sel':'')+"'/>").join('');th.querySelectorAll('img').forEach((im,i)=>im.onclick=()=>{th.querySelectorAll('img').forEach(x=>x.classList.remove('sel'));im.classList.add('sel');$('pmImg').src=imgs[i]});
+$('pmFreteOut').textContent='';$('pModalBg').classList.add('show')}
+let ckStep=1;
+function setStep(n){ckStep=n;[1,2,3].forEach(i=>$('st'+i).classList.toggle('on',i<=n));$('ck1').hidden=n!==1;$('ck2').hidden=n!==2;$('ck3').hidden=n!==3;if(n!==4)$('ck4').hidden=true}
+function freight(){const cep=($('cCep').value||'').replace(/\D/g,'');if(cep.length<8)return 19.9;if(cep.startsWith('0')||cep.startsWith('1'))return 14.9;return 24.9}
+function payMethod(){const r=document.querySelector("input[name='pay']:checked");return r?r.value:'pix'}
+function totals(){const sub=cartSubtotal();const sh=Object.keys(cart).length?(sub>=199?0:freight()):0;let desc=0;if(payMethod()==='pix')desc=sub*0.05;return{sub,sh,desc,total:sub+sh-desc}}
+function refreshSummary(){const t=totals();$('ckSummary').innerHTML='Subtotal: <b>'+BRL(t.sub)+'</b> • Frete: <b>'+(t.sh===0?'Grátis':BRL(t.sh))+'</b>'+(t.desc?' • Desconto Pix: <b>−'+BRL(t.desc)+'</b>':'')+'<br/><span style="font-size:1.15rem">Total: <b>'+BRL(t.total)+'</b></span> • Pagamento: <b>'+payMethod()+'</b>'}
+async function placeOrder(){
+const name=$('cName').value.trim(),email=$('cEmail').value.trim(),phone=$('cPhone').value.trim();
+if(name.length<2){toast('Informe seu nome');setStep(1);return}
+if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){toast('E-mail inválido');setStep(1);return}
+if(!Object.keys(cart).length){toast('Carrinho vazio');return}
+const t=totals();const code='LUM-'+Date.now().toString().slice(-6);
+const btn=$('placeOrder');btn.disabled=true;btn.textContent='Processando...';
+try{
+const order={code,customer_name:name,email,phone,cep:$('cCep').value,address:$('cAddr').value,city:$('cCity').value,uf:$('cUf').value,complement:$('cComp').value,payment_method:payMethod(),status:'pendente',subtotal:t.sub,shipping:t.sh,discount:t.desc,total:t.total};
+let orderId=null;
+try{const r=await supabase.from('orders').insert([order]).select('id,code').single();if(!r.error&&r.data){orderId=r.data.id}}
+catch(e){}
+if(orderId){try{const items=Object.values(cart).map(i=>({order_id:orderId,product_id:String(i.id),name:i.name,qty:i.qty,price:i.price}));await supabase.from('order_items').insert(items)}catch(e){}}
+else{try{const r2=await supabase.from('orders').insert([{customer_name:name,email,phone,payment_method:payMethod(),status:'pendente',total:t.total}]).select('id').single();if(r2.data)orderId=r2.data.id}catch(e){}}
+$('orderCode').textContent=code;$('orderInfo').textContent=BRL(t.total)+' • '+payMethod().toUpperCase()+' • '+name;
+$('ck1').hidden=true;$('ck2').hidden=true;$('ck3').hidden=true;$('ck4').hidden=false;
+cart={};saveCart();
+}catch(e){toast('Erro ao confirmar. Tente de novo.')}
+btn.disabled=false;btn.textContent='Confirmar pedido ✅'}
+let deb=null;
+$('q').addEventListener('input',e=>{clearTimeout(deb);deb=setTimeout(()=>{filter.q=e.target.value.trim();$('fQ').value=filter.q;renderAll()},300)});
+$('qBtn').onclick=()=>{filter.q=$('q').value.trim();$('fQ').value=filter.q;renderAll();document.getElementById('catalogo').scrollIntoView({behavior:'smooth'})};
+$('fQ').addEventListener('input',e=>{filter.q=e.target.value.trim();renderAll()});
+$('fCat').onchange=e=>{filter.cat=e.target.value;renderCats();renderAll()};
+$('fSort').onchange=e=>{filter.sort=e.target.value;renderAll()};
+$('openCart').onclick=openDrawer;$('closeCart').onclick=closeDrawer;$('drawerBg').onclick=closeDrawer;$('keepBuying').onclick=closeDrawer;
+$('goCheckout').onclick=()=>{if(!Object.keys(cart).length){toast('Carrinho vazio');return}closeDrawer();setStep(1);$('ck4').hidden=true;$('ckModalBg').classList.add('show');refreshSummary()};
+$('pmClose').onclick=()=>$('pModalBg').classList.remove('show');
+$('pModalBg').onclick=e=>{if(e.target.id==='pModalBg')$('pModalBg').classList.remove('show')};
+$('pmAdd').onclick=()=>{if(current)addToCart(current.id,$('pmQty').value)};
+$('pmFrete').onclick=()=>{const c=$('pmCep').value.replace(/\D/g,'');if(c.length<8){$('pmFreteOut').textContent='Digite um CEP válido.';return}const v=c.startsWith('0')?14.9:19.9;$('pmFreteOut').textContent='📦 Frete estimado '+BRL(v)+' • entrega em 3-7 dias úteis (grátis acima de R$ 199).'};
+$('to2').onclick=()=>{if($('cName').value.trim().length<2){toast('Informe seu nome');return}if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test($('cEmail').value.trim())){toast('E-mail inválido');return}setStep(2)};
+$('back1').onclick=()=>setStep(1);
+$('to3').onclick=()=>{if(($('cCep').value||'').length<5){toast('Informe o CEP');return}if(($('cAddr').value||'').length<3){toast('Informe o endereço');return}setStep(3);refreshSummary()};
+$('back2').onclick=()=>setStep(2);
+$('ckClose').onclick=()=>$('ckModalBg').classList.remove('show');
+document.querySelectorAll("input[name='pay']").forEach(r=>r.onchange=()=>{$('cardBox').hidden=payMethod()!=='cartao';refreshSummary()});
+$('placeOrder').onclick=placeOrder;
+$('okOrder').onclick=()=>$('ckModalBg').classList.remove('show');
+$('homeLink').onclick=()=>{filter={q:'',cat:'',sort:'rel'};$('q').value='';$('fQ').value='';renderCats();renderAll()};
+renderCats();renderAll();renderCart();load();
 </script>
 </body>
 </html>
