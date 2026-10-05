@@ -111,8 +111,11 @@
     tr:nth-child(even){background:#0a1020}
     @media(max-width:640px){table,thead,tbody,tr,th,td{display:block}th{display:none}td{border-bottom:none}tr{border:1px solid rgba(255,255,255,.08);border-radius:12px;margin-bottom:10px;overflow:hidden}}
     .form label{display:block;font-weight:700;margin:12px 0 6px;font-size:.92rem}
-    .form input{width:100%;padding:14px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:#080d18;color:#fff;font-size:1rem}
+    .form input[type=text],.form input[type=tel],.form input[type=email]{width:100%;padding:14px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:#080d18;color:#fff;font-size:1rem}
     .form input:focus{outline:2px solid var(--neon);border-color:var(--neon)}
+    .lgpd{display:flex;gap:10px;align-items:flex-start;margin-top:14px;background:#080d18;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:12px}
+    .lgpd input{margin-top:4px;width:18px;height:18px;accent-color:#00ffe7}
+    .lgpd span{font-size:.85rem;color:#c6cfd8}
     .form-error{color:#ff8a8a;font-size:.85rem;min-height:20px;margin-top:6px}
     .form-ok{background:rgba(0,230,118,.12);border:1px solid rgba(0,230,118,.4);color:#b7ffd8;padding:14px;border-radius:12px;margin-top:12px;display:none}
     .form-err{background:rgba(255,59,59,.12);border:1px solid rgba(255,59,59,.4);color:#ffc9c9;padding:14px;border-radius:12px;margin-top:12px;display:none}
@@ -269,7 +272,8 @@
         <input id="whatsapp" name="whatsapp" type="tel" inputmode="tel" placeholder="(11) 99999-9999" autocomplete="tel" required />
         <label for="email">Melhor e-mail</label>
         <input id="email" name="email" type="email" placeholder="voce@email.com" autocomplete="email" required />
-        <div class="form-error" id="formError" role="alert"></div>
+        <label class="lgpd" for="lgpd"><input id="lgpd" type="checkbox" required /><span>Aceito ser contatado(a) sobre a Mentoria Money Makers I.A via WhatsApp/e-mail (LGPD — Lei 13.709/2018). Não compartilhamos seus dados.</span></label>
+        <div class="form-error" id="formError" role="alert" aria-live="polite"></div>
         <div style="margin-top:14px"><button class="cta" id="submitBtn" type="submit" style="width:100%">QUERO MINHA VAGA POR R$ 139,89</button></div>
         <div class="form-ok" id="formOk">✅ Cadastro recebido! Abrindo seu WhatsApp…</div>
         <div class="form-err" id="formFail">⚠️ Não foi possível salvar agora, mas você pode continuar pelo WhatsApp.</div>
@@ -293,11 +297,11 @@
 <section class="sec" id="faq">
   <div class="card">
     <h2 class="title">Perguntas frequentes</h2>
-    <div class="faq-item"><button class="faq-q" aria-expanded="false">Preciso saber programar? <span>+</span></button><div class="faq-a"><p>Não. O método usa ferramentas no-code e prompts guiados, passo a passo.</p></div></div>
-    <div class="faq-item"><button class="faq-q" aria-expanded="false">Como recebo o acesso? <span>+</span></button><div class="faq-a"><p>Após confirmar no WhatsApp oficial, você recebe o link da área de alunos + convite do grupo e das lives.</p></div></div>
-    <div class="faq-item"><button class="faq-q" aria-expanded="false">E se eu não gostar? <span>+</span></button><div class="faq-a"><p>Você tem 7 dias de garantia conforme o CDC, com reembolso pela mesma forma de pagamento.</p></div></div>
-    <div class="faq-item"><button class="faq-q" aria-expanded="false">As aulas são ao vivo? <span>+</span></button><div class="faq-a"><p>Sim, há aulas ao vivo via Google Meet + gravações disponíveis para rever quando quiser.</p></div></div>
-    <div class="faq-item"><button class="faq-q" aria-expanded="false">Por quanto tempo tenho acesso? <span>+</span></button><div class="faq-a"><p>Acesso de 12 meses, incluindo atualizações do período e bônus desta turma.</p></div></div>
+    <div class="faq-item"><button type="button" class="faq-q" aria-expanded="false">Preciso saber programar? <span>+</span></button><div class="faq-a"><p>Não. O método usa ferramentas no-code e prompts guiados, passo a passo.</p></div></div>
+    <div class="faq-item"><button type="button" class="faq-q" aria-expanded="false">Como recebo o acesso? <span>+</span></button><div class="faq-a"><p>Após confirmar no WhatsApp oficial, você recebe o link da área de alunos + convite do grupo e das lives.</p></div></div>
+    <div class="faq-item"><button type="button" class="faq-q" aria-expanded="false">E se eu não gostar? <span>+</span></button><div class="faq-a"><p>Você tem 7 dias de garantia conforme o CDC, com reembolso pela mesma forma de pagamento.</p></div></div>
+    <div class="faq-item"><button type="button" class="faq-q" aria-expanded="false">As aulas são ao vivo? <span>+</span></button><div class="faq-a"><p>Sim, há aulas ao vivo via Google Meet + gravações disponíveis para rever quando quiser.</p></div></div>
+    <div class="faq-item"><button type="button" class="faq-q" aria-expanded="false">Por quanto tempo tenho acesso? <span>+</span></button><div class="faq-a"><p>Acesso de 12 meses, incluindo atualizações do período e bônus desta turma.</p></div></div>
   </div>
 </section>
 
@@ -363,9 +367,8 @@
         if(!open){ item.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
       });
     });
-    document.getElementById('navLinks').addEventListener('click', function(e){
-      if(e.target.tagName === 'A' && window.innerWidth <= 820) e.currentTarget.classList.remove('open');
-    });
+    var navLinks = document.getElementById('navLinks');
+    if(navLinks){ navLinks.addEventListener('click', function(e){ if(e.target.tagName === 'A' && window.innerWidth <= 820) e.currentTarget.classList.remove('open'); }); }
   })();
 </script>
 
@@ -379,27 +382,57 @@
   const ok = document.getElementById('formOk');
   const fail = document.getElementById('formFail');
   const btn = document.getElementById('submitBtn');
+  const wppInput = document.getElementById('whatsapp');
+  const lgpd = document.getElementById('lgpd');
+  function maskPhone(v){
+    const d = v.replace(/\D/g,'').slice(0,11);
+    if(d.length <= 2) return d.length ? '('+d : '';
+    if(d.length <= 6) return '('+d.slice(0,2)+') '+d.slice(2);
+    if(d.length <= 10) return '('+d.slice(0,2)+') '+d.slice(2,6)+'-'+d.slice(6);
+    return '('+d.slice(0,2)+') '+d.slice(2,7)+'-'+d.slice(7);
+  }
+  wppInput.addEventListener('input', () => { wppInput.value = maskPhone(wppInput.value); });
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     err.textContent = ''; ok.style.display = 'none'; fail.style.display = 'none';
     const nome = document.getElementById('nome').value.trim();
-    const whatsappRaw = document.getElementById('whatsapp').value.trim();
+    const whatsappRaw = wppInput.value.trim();
     const email = document.getElementById('email').value.trim().toLowerCase();
     const digits = whatsappRaw.replace(/\D/g, '');
-    if (nome.length < 2) { err.textContent = 'Informe seu nome.'; return; }
-    if (digits.length < 10 || digits.length > 13) { err.textContent = 'Informe um WhatsApp válido com DDD.'; return; }
+    if (nome.length < 2) { err.textContent = 'Informe seu nome completo.'; return; }
+    if (digits.length < 10 || digits.length > 11) { err.textContent = 'Informe um WhatsApp válido com DDD. Ex: (11) 99999-9999'; return; }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { err.textContent = 'Informe um e-mail válido.'; return; }
-    btn.disabled = true; btn.textContent = 'ENVIANDO...';
+    if (!lgpd.checked) { err.textContent = 'Para continuar, aceite o contato sobre a mentoria (LGPD).'; return; }
+    btn.disabled = true;
+    const originalLabel = btn.textContent;
+    btn.textContent = 'ENVIANDO...';
+    let savedOk = true;
+    let saveMessage = '';
     try {
-      await supabase.from('mentorship_leads').insert([{ name: nome, whatsapp: digits, email: email, source: 'landing_mm_ia' }]);
-    } catch (e2) { console.warn('lead insert fallback', e2); }
-    ok.style.display = 'block';
-    const msg = "Olá! Sou " + nome + " (" + email + "). Quero entrar na Mentoria Money Makers I.A por R$ 139,89 🔥";
+      const base = { name: nome, email: email, phone: digits, source: 'landing_mm_ia' };
+      const withWpp = { ...base, whatsapp: whatsappRaw };
+      let res = await supabase.from('mentorship_leads').insert([withWpp]).select('id');
+      if (res.error && /whatsapp|column|schema|PGRST/i.test(res.error.message || '')) {
+        res = await supabase.from('mentorship_leads').insert([base]).select('id');
+      }
+      if (res.error) throw res.error;
+    } catch (e2) {
+      console.warn('lead insert falhou', e2);
+      savedOk = false;
+      saveMessage = (e2 && e2.message) ? e2.message : 'erro desconhecido';
+    }
+    if (savedOk) {
+      ok.style.display = 'block';
+    } else {
+      fail.style.display = 'block';
+      fail.textContent = '⚠️ Não foi possível salvar agora (' + saveMessage + '), mas você pode continuar pelo WhatsApp.';
+    }
+    const msg = "Olá! Sou " + nome + " (" + email + ") — " + whatsappRaw + ". Quero entrar na Mentoria Money Makers I.A por R$ 139,89 🔥";
     setTimeout(() => {
       window.open("https://wa.me/5511989353418?text=" + encodeURIComponent(msg), "_blank");
-      btn.disabled = false; btn.textContent = 'QUERO MINHA VAGA POR R$ 139,89';
-      form.reset();
-    }, 800);
+      btn.disabled = false; btn.textContent = originalLabel;
+      if (savedOk) form.reset();
+    }, 900);
   });
 </script>
 </body>
